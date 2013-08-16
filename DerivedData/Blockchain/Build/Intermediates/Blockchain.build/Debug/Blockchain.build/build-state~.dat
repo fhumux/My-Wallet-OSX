@@ -1,0 +1,616 @@
+TBlockchain
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Info.plist Blockchain/Blockchain-Info.plist
+cProcessPCH /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.pth Blockchain/Blockchain-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain normal x86_64
+cCompileXIB /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib
+cCopyStringsFile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/InfoPlist.strings Blockchain/en.lproj/InfoPlist.strings
+cCpResource Data DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data
+cCpResource Blockchain/en.lproj/Credits.rtf DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtf
+cConvertIconsetFile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns /Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset
+cTouch /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+cProcessProductPackaging /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain.entitlements /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent
+cCodeSign /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c0000000051F5725F00000000000000AA
+t1375040095
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000005108187900000000000025C8
+t1359485049
+s9672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c000000005108187900000000000001E5
+t1359485049
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework/WebKit
+c00000000514916460000000000087CE4
+t1363744326
+s556260
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m
+c00000000520E320F0000000000000D29
+t1376662031
+s3369
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain-Prefix.pch
+c00000000520CD3B80000000000000097
+t1376572344
+s151
+i<Cocoa/Cocoa.h>
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain.entitlements
+c00000000520D08CC000000000000015D
+t1376585932
+s349
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m
+c00000000520CF6D9000000000000065A
+t1376581337
+s1626
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m
+c00000000520E326B0000000000002870
+t1376662123
+s10352
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m
+c0000000051DD78040000000000000B33
+t1373468676
+s2867
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m
+c0000000051DD78040000000000002DF0
+t1373468676
+s11760
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m
+c0000000051DD780400000000000007AD
+t1373468676
+s1965
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m
+c0000000051DD7804000000000000119E
+t1373468676
+s4510
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m
+c0000000051DD780400000000000020D5
+t1373468676
+s8405
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m
+c0000000051DD780400000000000028F3
+t1373468676
+s10483
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m
+c0000000051DD780400000000000028BB
+t1373468676
+s10427
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m
+c0000000051DD78040000000000000810
+t1373468676
+s2064
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m
+c0000000051DD78040000000000001019
+t1373468676
+s4121
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m
+c0000000051DD78040000000000000C7E
+t1373468676
+s3198
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/Credits.rtf
+c00000000520CD3B800000000000001B4
+t1376572344
+s436
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/InfoPlist.strings
+c00000000520CD3B8000000000000002D
+t1376572344
+s45
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib
+c00000000520E2D9800000000000179AD
+t1376660888
+s96685
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m
+c00000000520CD3B800000000000000FC
+t1376572344
+s252
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Data
+c00000000520E34880000000000000242
+t1376662664
+s578
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/Blockchain.LinkFileList
+c00000000520E363700000000000009A2
+t1376663095
+s2466
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.pth
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Info.plist
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtf
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/MainMenu.nib
+t2
+s0
+
+N/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset
+c00000000520E35F200000000000001BA
+t1376663026
+s442
+
+NBlockchain/Blockchain-Info.plist
+c00000000520D061700000000000004A7
+t1376585239
+s1191
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m
+r0
+
+CBuild AST from /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesdb6d8bb76dbeb741^e7a7a0b76dbeb741^---0#1#0#--18"Check dependencies36"FD4B203C-BE57-4C5C-BED8-5AF85AE2518C-
+
+CCodeSign /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+s398355898.552438
+e398355898.672803
+r1
+xCodeSign
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"CodeSign DerivedData/Blockchain/Build/Products/Debug/Blockchain.app747b8dba6dbeb741^d13cacba6dbeb741^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/0000000000000000^608"CodeSign DerivedData/Blockchain/Build/Products/Debug/Blockchain.app    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    /usr/bin/codesign --force --sign 5de22644c6e6522cc5d1a238357c5d23898d5757 --entitlements /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app36"20E4006F-78CD-48F5-B7F3-EA718013DC22-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.066988
+e398355897.291172
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m:45:22: warning: performSelector may cause a leak because its selector is unknown [-Warc-performSelector-leaks]
+o        return [self performSelector:NSSelectorFromString(function) withObject:dictionary];
+o                     ^
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m:45:38: note: used here
+o        return [self performSelector:NSSelectorFromString(function) withObject:dictionary];
+o                                     ^
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m:95:75: warning: sending 'AppDelegate *const __strong' to parameter of incompatible type 'id<NSUserNotificationCenterDelegate>'
+o    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+o                                                                          ^~~~
+o/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUserNotification.h:85:58: note: passing argument to parameter 'delegate' here
+o@property (assign) id <NSUserNotificationCenterDelegate> delegate;
+o                                                         ^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m164b11b96dbeb741^01894ab96dbeb741^-1271"/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m:45:22: warning: performSelector may cause a leak because its selector is unknown [-Warc-performSelector-leaks]        return [self performSelector:NSSelectorFromString(function) withObject:dictionary];                     ^/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m:45:38: note: used here        return [self performSelector:NSSelectorFromString(function) withObject:dictionary];                                     ^/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m:95:75: warning: sending 'AppDelegate *const __strong' to parameter of incompatible type 'id<NSUserNotificationCenterDelegate>'    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];                                                                          ^~~~/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUserNotification.h:85:58: note: passing argument to parameter 'delegate' here@property (assign) id <NSUserNotificationCenterDelegate> delegate;                                                         ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@64"PerformSelector may cause a leak because its selector is unknown-398355897#18446744073709551615#0#1(2@9"Used here-398355897#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@89"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m0000000000000000^44#37#44#37#1362#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@89"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m0000000000000000^44#21#44#21#1346#0#14"Semantic Issue--2@110"Sending 'AppDelegate *const __strong' to parameter of incompatible type 'id<NSUserNotificationCenterDelegate>'-398355897#18446744073709551615#0#1(2@45"Passing argument to parameter 'delegate' here-398355897#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@190"file://localhost/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUserNotification.h0000000000000000^84#57#84#57#5664#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@89"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m0000000000000000^94#74#94#74#3245#0#14"Semantic Issue1(3@89"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m0000000000000000^94#74#94#78#3245#0#-0#0#0#-19%DVTDocumentLocation4@89"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m0000000000000000^3642"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.o Blockchain/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/AppDelegate.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/AppDelegate.o36"02653D9B-AC7F-4803-ACF7-E31D6DFC1EA6-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.066996
+e398355897.275713
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m1f4d11b96dbeb741^469446b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m0000000000000000^3744"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.o Blockchain/GBWebViewExternalLinkHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/GBWebViewExternalLinkHandler.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/GBWebViewExternalLinkHandler.o36"46400920-C256-4546-A2E7-C3FBD202888A-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.238560
+e398355897.343665
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.mf8363db96dbeb741^5dfa57b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m0000000000000000^3666"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.o Blockchain/JSBridgeWebView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/JSBridgeWebView.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/JSBridgeWebView.o36"1AF2F314-4D52-423B-BDD6-C258A1B9945B-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.067033
+e398355897.214516
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.mdf4f11b96dbeb741^10ea36b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m0000000000000000^3662"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.o Blockchain/SBJSON/SBJsonParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonParser.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonParser.o36"58C05E3C-4875-4CDC-830C-0E8CD18F88F8-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.067051
+e398355897.227054
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.md84911b96dbeb741^5c1f3ab96dbeb741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m0000000000000000^3698"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.o Blockchain/SBJSON/SBJsonStreamParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParser.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParser.o36"579F53FE-0D85-4E61-9B32-6350A37C0859-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.067064
+e398355897.205228
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m164f11b96dbeb741^d28934b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m0000000000000000^3764"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.o Blockchain/SBJSON/SBJsonStreamParserAccumulator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAccumulator.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAccumulator.o36"B2D8E9DA-8B42-4742-A4AD-175AFEDBD263-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.067083
+e398355897.219460
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m2f4d11b96dbeb741^7b2d38b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m0000000000000000^3740"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o Blockchain/SBJSON/SBJsonStreamParserAdapter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserAdapter.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o36"2FF04F07-F91F-497A-9F41-EEFEDC819EEC-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.067094
+e398355897.236962
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m274f11b96dbeb741^58a93cb96dbeb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m0000000000000000^3728"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.o Blockchain/SBJSON/SBJsonStreamParserState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamParserState.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamParserState.o36"DFF1BA8B-9C7C-4290-ADD0-39349A9984CF-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.203635
+e398355897.302566
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.mf64334b96dbeb741^3a754db96dbeb741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m0000000000000000^3716"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.o Blockchain/SBJSON/SBJsonStreamTokeniser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamTokeniser.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamTokeniser.o36"D1E9B3DC-A892-4D15-8289-5EA8DB00BD0A-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.206521
+e398355897.310570
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m9f0135b96dbeb741^62814fb96dbeb741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m0000000000000000^3698"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.o Blockchain/SBJSON/SBJsonStreamWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriter.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriter.o36"246334A8-B6B9-4E6F-AC2D-D52AC7513474-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.215866
+e398355897.273328
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.mc36737b96dbeb741^780946b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m0000000000000000^3764"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.o Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterAccumulator.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterAccumulator.o36"C58D80D8-D79D-405D-9A77-ED6230EDFD27-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.220839
+e398355897.290279
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.mf7af38b96dbeb741^444f4ab96dbeb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m0000000000000000^3728"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.o Blockchain/SBJSON/SBJsonStreamWriterState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonStreamWriterState.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonStreamWriterState.o36"6383A37F-5365-478D-8A08-9D71F3D0D478-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.228415
+e398355897.286522
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m12a03ab96dbeb741^a35949b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m0000000000000000^3662"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.o Blockchain/SBJSON/SBJsonWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/SBJSON/SBJsonWriter.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/SBJsonWriter.o36"AD32EEF7-B374-4D41-9713-1B426FA8EC38-
+
+CCompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355897.067017
+e398355897.202281
+r1
+xCompileC
+xDerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.o
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m6f4a11b96dbeb741^d2c833b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m0000000000000000^3600"CompileC DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.o Blockchain/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -include /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/main.m -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/main.o36"AE8E9741-696A-4D0C-9439-D849898D6A36-
+
+CCompileXIB /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib
+s398355897.559762
+e398355898.518160
+r1
+xCompileXIB
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib:371: warning: Content rectangle not entirely on screen with the menu bar (May not be completely visible for all screen resolutions and configurations) [9]
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compiling /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xibaa618fb96dbeb741^87a684ba6dbeb741^-272"/* com.apple.ibtool.document.warnings *//Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib:371: warning: Content rectangle not entirely on screen with the menu bar (May not be completely visible for all screen resolutions and configurations)1(21%IDEActivityLogMessage2@136"Content rectangle not entirely on screen with the menu bar (May not be completely visible for all screen resolutions and configurations)58"Content rectangle not entirely on screen with the menu bar398355898#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@97"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib0000000000000000^370#18446744073709551615#370#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--0#0#0#-19%DVTDocumentLocation4@97"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib0000000000000000^664"CompileXIB Blockchain/en.lproj/MainMenu.xib    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/MainMenu.nib /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/MainMenu.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk36"D4AB06F9-59EF-4175-91A6-46AE067DC826-
+
+CConvertIconsetFile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns /Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset
+s398355897.559859
+e398355897.810063
+r1
+xConvertIconsetFile
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset:warning: No image found for point size: 128 at scale: 2.
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset:warning: No image found for point size: 256 at scale: 1.
+o/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset:warning: No image found for point size: 256 at scale: 2.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"ConvertIconsetFile DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns cube.iconsetaa658fb96dbeb741^1860cfb96dbeb741^-354"/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset:warning: No image found for point size: 128 at scale: 2./Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset:warning: No image found for point size: 256 at scale: 1./Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset:warning: No image found for point size: 256 at scale: 2.3(21%IDEActivityLogMessage2@47"No image found for point size: 128 at scale: 2.-398355897#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@78"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#16"Iconutil Warning--2@47"No image found for point size: 256 at scale: 1.-398355897#18446744073709551615#0#-1#-3@78"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#16"Iconutil Warning--2@47"No image found for point size: 256 at scale: 2.-398355897#18446744073709551615#0#-1#-3@78"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#16"Iconutil Warning--0#0#0#-19%DVTDocumentLocation4@78"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset/0000000000000000^421"ConvertIconsetFile DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns cube.iconset    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    /usr/bin/iconutil --convert icns --output /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/cube.icns /Users/admin/Sites/blockchain.info/My-Wallet-OSX/cube.iconset36"FAF54400-E941-4D48-A072-F4B47CE18143-
+
+CCopyStringsFile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/InfoPlist.strings Blockchain/en.lproj/InfoPlist.strings
+s398355897.559779
+e398355897.567298
+r1
+xCopyStringsFile
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/InfoPlist.strings
+xBlockchain/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy Blockchain/en.lproj/InfoPlist.strings49648fb96dbeb741^5c3b91b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/InfoPlist.strings0000000000000000^482"CopyStringsFile DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/InfoPlist.strings Blockchain/en.lproj/InfoPlist.strings    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj -- Blockchain/en.lproj/InfoPlist.strings36"BE570C6C-30DD-4253-82EE-6D2B0A3EDE9F-
+
+CCpResource Blockchain/en.lproj/Credits.rtf DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtf
+s398355897.559850
+e398355897.563514
+r1
+xCpResource
+xBlockchain/en.lproj/Credits.rtf
+xDerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Copy DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtfd4638fb96dbeb741^424290b96dbeb741^---0#0#0#-19%DVTDocumentLocation2@163"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtf000000000080d041^527"CpResource Blockchain/en.lproj/Credits.rtf DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj/Credits.rtf    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/en.lproj/Credits.rtf /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/en.lproj36"4350BEF1-B839-447E-BB37-F9EC4420A16A-
+
+CCpResource Data DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data
+s398355897.559811
+e398355897.615379
+r1
+xCpResource
+xData
+xDerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Copy DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data28648fb96dbeb741^be899db96dbeb741^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data000000000080d041^448"CpResource Data DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources/Data    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Data /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Resources36"824E0002-CDC8-46F1-85EA-EEE8F38C82BE-
+
+CLd /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain normal x86_64
+s398355897.350433
+e398355897.541571
+r1
+xLd
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Link /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain7ec659b96dbeb741^0da58ab96dbeb741^---0#0#0#--1025"Ld DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain normal x86_64    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug -filelist /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Objects-normal/x86_64/Blockchain.LinkFileList -mmacosx-version-min=10.8 -fobjc-arc -fobjc-link-runtime -framework WebKit -framework Cocoa -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/MacOS/Blockchain36"1F4ECB69-097F-4D1B-ADBC-B0B1EBA25A2D-
+
+CProcessInfoPlistFile /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Info.plist Blockchain/Blockchain-Info.plist
+s398355895.633151
+e398355895.636782
+r1
+xProcessInfoPlistFile
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Info.plist
+xBlockchain/Blockchain-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Process Blockchain/Blockchain-Info.plist7d23a2b76dbeb741^4704a3b76dbeb741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain-Info.plist0000000000000000^557"ProcessInfoPlistFile DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Info.plist Blockchain/Blockchain-Info.plist    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    builtin-infoPlistUtility Blockchain/Blockchain-Info.plist -genpkginfo /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app/Contents/Info.plist36"F982D1BC-783F-45C8-AF91-7D3F3F6C56DD-
+
+CProcessPCH /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.pth Blockchain/Blockchain-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s398355895.644840
+e398355897.060303
+r1
+xProcessPCH
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.pth
+xBlockchain/Blockchain-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile Blockchain/Blockchain-Prefix.pch0e2ea5b76dbeb741^8f6f0fb96dbeb741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain-Prefix.pch0000000000000000^3538"ProcessPCH DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.pth Blockchain/Blockchain-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-generated-files.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-own-target-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-all-target-headers.hmap -iquote /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain-project-headers.hmap -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources/x86_64 -I/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/DerivedSources -F/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug --serialize-diagnostics /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.dia -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain-Prefix.pch -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.pth -MMD -MT dependencies -MF /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/PrecompiledHeaders/Blockchain-Prefix-hbixzpplqkbejybqvpmceickgzrs/Blockchain-Prefix.pch.d36"55DC9FD9-7934-4AE4-AFFC-6BD70DC08CAC-
+
+CProcessPCH /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Index/PrecompiledHeaders/Blockchain-Prefix-hdgptdwtsyvgnieqemrtxygtmcxv_ast/Blockchain-Prefix.pch.pth Blockchain/Blockchain-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessProductPackaging /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain.entitlements /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent
+s398355898.539698
+e398355898.544452
+r1
+xProcessProductPackaging
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain.entitlements
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection158"ProcessProductPackaging Blockchain/Blockchain.entitlements DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent813d8aba6dbeb741^705f8bba6dbeb741^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent000000000080d041^513"ProcessProductPackaging Blockchain/Blockchain.entitlements DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    builtin-productPackagingUtility /Users/admin/Sites/blockchain.info/My-Wallet-OSX/Blockchain/Blockchain.entitlements -entitlements -format xml -o /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Intermediates/Blockchain.build/Debug/Blockchain.build/Blockchain.xcent36"5E6B278B-7C71-4370-BA0F-3F9D9B4AC183-
+
+CTouch /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+s398355898.525608
+e398355898.531964
+r1
+xTouch
+x/Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Touch /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.appbf9b86ba6dbeb741^fd2e88ba6dbeb741^---0#0#0#--251"Touch DerivedData/Blockchain/Build/Products/Debug/Blockchain.app    cd /Users/admin/Sites/blockchain.info/My-Wallet-OSX    /usr/bin/touch -c /Users/admin/Sites/blockchain.info/My-Wallet-OSX/DerivedData/Blockchain/Build/Products/Debug/Blockchain.app36"19FF61E6-2F21-43FC-96AF-8F1B8F6359A4-
+

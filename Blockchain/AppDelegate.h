@@ -7,9 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import "JSBridgeWebView.h"
+
+@interface AppDelegate : NSObject <NSApplicationDelegate, JSBridgeWebViewDelegate>
+
+@property (retain) IBOutlet JSBridgeWebView *webView;
 
 @property (assign) IBOutlet NSWindow *window;
+
+- (NSString*)webView:(WebView*) webview didReceiveJSNotificationWithDictionary:(NSDictionary*) dictionary;
 
 @end
