@@ -25,7 +25,7 @@
 -(void)webView:(WebView *)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id<WebPolicyDecisionListener>)listener {
     //execute handler
     if (self.handler) {
-        self.handler(actionInformation[WebActionOriginalURLKey]);
+        self.handler([actionInformation objectForKey:WebActionOriginalURLKey]);
     }
     
     //our job is done so safe to unretain yourself

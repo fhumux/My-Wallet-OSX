@@ -12,18 +12,25 @@ $(document).ready(function() {
     if (data_resource)
         resource = data_resource;
 
+                  
     $('#restore-wallet > div > div:nth-child(1)').attr('class', 'span12');
 
     $('#restore-wallet > div:nth-child(1)').attr('class', 'row-fluid');
 
     $('#restore-wallet > div > div:nth-child(2)').remove();
 
-    $('#home-intro > div > div:nth-child(1)').attr('class', 'span12').prepend('<h2 style="display:inline-block">Account Summary</h2><div class="page-header" style="margin-top:0px;padding:0px"></div>');
+    $('#home-intro > div > div:nth-child(1)').attr('class', 'span12').prepend('<h2 style="display:inline-block">Account Summary <small>Overview of your Blockchain account</small></h2><div class="page-header" style="margin-top:0px;padding:0px"></div>');
 
     $('#home-intro > div > div:nth-child(2)').remove();
-
-    $('.loading-indicator').remove();
-
+                        
+    $('#status-container').empty().html('<h2 style="font-size:24px"></h2>').find('h2').append($('.quickstart > .container > div:first-of-type > .span12 > h1 > div'));
+                  
+    //$('#my-transactions h2 small').remove();
+                  
+    $('#balance2').remove();
+                  
+    $('.quickstart > .container > div:first-of-type').remove();
+                  
     $('#send-ticker').remove();
 
     $('#import-export-btn').parent().remove();

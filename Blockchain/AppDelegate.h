@@ -11,7 +11,9 @@
 
 #import "JSBridgeWebView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, JSBridgeWebViewDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, JSBridgeWebViewDelegate> {
+    BOOL notificationCenterIsAvailable;
+}
 
 @property (retain) IBOutlet JSBridgeWebView *webView;
 

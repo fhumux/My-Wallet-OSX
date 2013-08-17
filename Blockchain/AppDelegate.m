@@ -12,17 +12,17 @@
 @implementation AppDelegate
 
 
--(id)getKey:(NSString*)dictionary {
-   return [[NSUserDefaults standardUserDefaults] valueForKey:[dictionary valueForKey:@"key"]];
-}
-
 -(NSString*)getApplicationDocumentsPath {
     NSArray *paths = NSSearchPathForDirectoriesInDomains
     (NSDocumentDirectory, NSUserDomainMask, YES);
     return [paths objectAtIndex:0];
 }
 
--(void)saveKey:(NSString*)dictionary {
+-(id)getKey:(NSString*)dictionary {
+   return [[NSUserDefaults standardUserDefaults] valueForKey:[dictionary valueForKey:@"key"]];
+}
+
+-(id)saveKey:(NSString*)dictionary {
     
     NSString * key = [dictionary valueForKey:@"key"];
     NSString * value = [dictionary valueForKey:@"value"];
@@ -42,43 +42,58 @@
     [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
 
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    return nil;
 }
 
--(void)removeKey:(NSString*)dictionary {
+-(id)removeKey:(NSString*)dictionary {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:[dictionary valueForKey:@"key"]];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    return nil;
 }
 
--(void)clearKeys:(NSString*)dictionary {
+-(id)clearKeys:(NSString*)dictionary {
     NSString * appDomain = [[NSBundle mainBundle] bundleIdentifier];
     
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
 
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    return nil;
 }
 
 - (NSString*)webView:(WebView*) webview didReceiveJSNotificationWithDictionary:(NSDictionary*) dictionary
 {
     NSString * function = (NSString*)[dictionary objectForKey:@"function"];
     if (function != nil) {
-        return [self performSelector:NSSelectorFromString(function) withObject:dictionary];
+        SEL selector = NSSelectorFromString(function);
+        if ([self respondsToSelector:selector])
+            return [self performSelector:selector withObject:dictionary];
+        else
+            return nil;
     }
     
     return nil;
 }
 
-- (void)showNotification:(NSDictionary*) dictionary {
+
+- (id)showNotification:(NSDictionary*) dictionary {
     [self showNotification:[dictionary valueForKey:@"title"] description:[dictionary valueForKey:@"description"]];
+
+    return nil;
 }
 
 - (void)showNotification:(NSString *)title description:(NSString*)description {
-    NSUserNotification *notification = [[NSUserNotification alloc] init];
-    notification.title = title;
-    notification.informativeText =description;
-    notification.soundName = NSUserNotificationDefaultSoundName;
-    
-    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    if (notificationCenterIsAvailable) {
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = title;
+        notification.informativeText =description;
+        notification.soundName = NSUserNotificationDefaultSoundName;
+        
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
 }
 
 
@@ -94,8 +109,11 @@
     return YES;
 }
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    notificationCenterIsAvailable = (NSClassFromString(@"NSUserNotificationCenter")!=nil);
+
     NSString * resources = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Data/"];
     
     NSString * indexPath = [resources stringByAppendingPathComponent:@"index.html"];
@@ -114,8 +132,9 @@
     
     [self.webView setUIDelegate:self];
     
-    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
-
+    if (notificationCenterIsAvailable)
+        [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:indexPath]]];
 }
 
