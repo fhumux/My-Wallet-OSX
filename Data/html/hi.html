@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="hi">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">चलाना</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 पुनरूक्तियाँ</h3>
+
+        <p>PBKDF2 यह bruteforce के लिए आवश्यक प्रयास बढ़ती अपना पासवर्ड फैला है जो एक समारोह है. पुनरावृत्तियों की संख्या जितनी अधिक होगी लेकिन आप अपने ब्राउज़र के एक धीमा नोटिस कर सकते हैं बेहतर है.</p>
+
+        <p><b>इस मान को बदलने से नया बटुआ एन्क्रिप्शन प्रारूप का समर्थन नहीं करते जो पुराने ग्राहकों के बीच संगतता मुद्दों पैदा कर सकता है.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">पुनरूक्तियाँ:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>तुम जल्दी से सही शीर्ष पर अपने संतुलन पर क्लिक करके Bitcoins और अपने स्थानीय मुद्रा के बीच स्विच कर सकते हैं.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Bitcoin लिंक संभाल</h3>
+
+        <p>आप bitcoin लिंक का डिफ़ॉल्ट हैंडलर के रूप में blockchain.info सेट करना चाहेंगे? Bitcoin लिंक (यूआरआई) स्वचालित रूप से एक प्राप्तकर्ता bitcoin पता दर्ज करें और क्लिक करने पर मूल्य भेजने के लिए इस्तेमाल कर रहे हैं.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">यूआरआइ हैंडलर रजिस्टर</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">दूसरा पासवर्ड संकेत:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 पुनरूक्तियाँ</h3>
-
-        <p>PBKDF2 यह bruteforce के लिए आवश्यक प्रयास बढ़ती अपना पासवर्ड फैला है जो एक समारोह है. पुनरावृत्तियों की संख्या जितनी अधिक होगी लेकिन आप अपने ब्राउज़र के एक धीमा नोटिस कर सकते हैं बेहतर है.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">पुनरूक्तियाँ:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>पते संग्रहीत</h3>
 
             <p>संग्रहीत पते कि तुम अब और नहीं की जरूरत हो सकती है और जो इसलिए मुख्य दृश्य में छिपा कर रहे हैं पते हैं। आप किसी भी समय पर उन्हें नीला आइकन पर क्लिक करके unarchive कर सकते हैं। </p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>साझा पते</h3>
 
-            <p style="padding-top:10px">साझा पते से प्राप्त भुगतान अपने बटुए में एक और पते पर भेजा जाएगा. किसी भी प्राप्त भुगतान एक साझा लेनदेन की चेन तोड़ने बटुआ के माध्यम से भेजा जाता है. <a href="https://blockchain.info/wallet/send-shared" target="new">(अधिक जानकारी)</a></p>
+            <p style="padding-top:10px">साझा पते से प्राप्त भुगतान अपने बटुए में एक और पते पर भेजा जाएगा. किसी भी प्राप्त भुगतान एक साझा लेनदेन की चेन तोड़ने बटुआ के माध्यम से भेजा जाता है. <a href="https://blockchain.info/wallet/send-shared" target="blank">(अधिक जानकारी)</a></p>
 
             <p class="well">
                 <b>साझा पते एक लेन - देन के लिए ही मान्य हैं और एक 0.5% लेनदेन शुल्क उठाना.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>वापस स्वागत है </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">ओपन बटुआ</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">नयाबटुआ बनाएँ</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p>यदि आप अपने बटुए की पहचान खो दिया है, पहले आप पर लॉग ऑन करने का प्रयास करते समय आपको प्राप्त पुष्टिकरण ईमेल की जाँच करें। आप ईमेल पता नहीं कर सकते हैं? फिर नीचे दिए गए बटन पर क्लिक करें और हम भेज देंगे आप एक नया एक है. </p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">वॉलेट की वसूली</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">आयात बैकअप</a> <a class="btn btn-small btn-secondary download-backup-btn">बैकअप डाउनलोड</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">वॉलेट की वसूली</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">आयात बैकअप</a> <a class="btn btn-small btn-secondary download-backup-btn">बैकअप डाउनलोड</a>
             </p>
 
             <h4>दो कारक प्रमाणीकरण विवरण खोया.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">रीसेट डबल प्रमाणीकरण</a>
-            </p>
-
-            <h4>पासवर्ड खो गया</h4>
-
-            <p>अपने बटुए आपके ब्राउज़र से पहले हमें hthis तक पहुँच द्वारा और इस कारण से हम खो पासवर्ड बहाल करने में मदद करने में सक्षम नहीं हैं के लिए एन्क्रिप्टेड है। विस्मृत पासवर्ड के कारण पैसे की संभावित हानि को रोकने के लिए यह कि आप अपने बटुए के लिए निजी कुंजियों का एक पेपर बैक अप का उपयोग अनुशंसित है.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">वॉलेट की वसूली</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">रीसेट डबल प्रमाणीकरण</a>
             </p>
 
             <h4>मदद की ज़रूरत है?</h4>
 
             <p>
-                हमारे <a href="https://blockchain.info/wallet/support-pages">समर्थन पन्नों</a> पढ़ें
+                हमारे <a target="blank" href="https://blockchain.info/wallet/support-pages">समर्थन पन्नों</a> पढ़ें
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">आम तौर पर w Bitcoin लेनदेन यहाँ सूचीबद्ध किया जाएगा, लेकिन तुम नहीं.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>एनक्रिप्टेड निजी कुंजी</h3>
+            </div>
+            <div class="modal-body">
+                <p>एक एन्क्रिप्टेड निजी कुंजी पाया गया है. एन्क्रिप्शन नीचे पदबंध दर्ज करें:</p>
+                <p align="center">
+                    <b>कूटशब्द::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">जारी रखें</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>वॉलेट पासवर्ड</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>पता QR कोड <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>इस क्रिया की आवश्यकता है bitcoin के लिए निजी कुंजी को संबोधित <span class="address" style="font-weight:bold"></span>। में निजी कुंजी दर्ज करें। </p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>QR कोड स्कैन</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">रद्द करें</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>कृपया प्रतीक्षा करें ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            कुंजी खींच. कृपया प्रतीक्षा करें ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

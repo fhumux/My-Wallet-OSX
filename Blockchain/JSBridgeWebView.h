@@ -55,12 +55,13 @@
 		The UIWebView delegate is used internally for handling the notifications
 		from javascript. The JSBridge API user does not need to worry about
 		the bridgeDelegate.
-	 */
+	 */ 
 	id<JSBridgeWebViewDelegate> bridgeDelegate;
     
     NSMutableSet * usedIDs;
 }
 
+-(void)reset;
 -(void) setJSDelegate:(NSObject<JSBridgeWebViewDelegate>*) newDelegate;
 -(id) JSdelegate;
 

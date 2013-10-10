@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="da">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Kør</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Gentagelser</h3>
+
+        <p>PBKDF2 er en funktion, som strækker din adgangskode øger indsats, der kræves for at bruteforce den. Et højere antal gentagelser er bedre men du kan bemærke en bremse i din browser.</p>
+
+        <p><b>Ændrer denne værdi, kan forårsage kompatibilitetsproblemer mellem gamle kunder, som ikke understøtter den nye tegnebog kryptering format.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Gentagelser:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Du kan hurtigt skifte mellem bitcoins og din lokale valuta ved at klikke på din saldo i øverste højre.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Håndtag Bitcoin Links</h3>
+
+        <p>Kunne du tænke dig at indstille blockchain.info som standard handleren af ​​Bitcoin links? Bitcoin links (URI&#39;er) bruges til automatisk at angive en modtagers Bitcoin adresse og send værdi, når der klikkes.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Registrer URI Handler</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Anden adgangskode-tip:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Gentagelser</h3>
-
-        <p>PBKDF2 er en funktion, som strækker din adgangskode øger indsats, der kræves for at bruteforce den. Et højere antal gentagelser er bedre men du kan bemærke en bremse i din browser.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Gentagelser:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Arkiverede adresser</h3>
 
             <p>Arkiverede adresser er adresser, du måske ikke har brug for længere, der er skjult i hovedvisningen, men stadig en del af din tegnebog. Du kan genaktivere dem når som helst ved at klikke på det blå ikon.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Delte adresser</h3>
 
-            <p style="padding-top:10px">Betalinger modtaget til delte adresser vil blive sendt til en anden adresse i din tegnebog. Eventuelle modtagne betalinger sendes gennem en fælles tegnebog bryde den kæde af transaktioner. <a href="https://blockchain.info/wallet/send-shared" target="new">(Mere info)</a></p>
+            <p style="padding-top:10px">Betalinger modtaget til delte adresser vil blive sendt til en anden adresse i din tegnebog. Eventuelle modtagne betalinger sendes gennem en fælles tegnebog bryde den kæde af transaktioner. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Mere info)</a></p>
 
             <p class="well">
                 <b>Delte adresser er gyldige for én transaktion kun og pådrage sig en 0,5% transaktionsgebyr.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Velkommen tilbage </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Åbn tegnebogen</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Opret ny Wallet</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p>Hvis du har mistet din tegnebog identifikator, kontroller først den bekræftelses e-mail, du modtog da du tilmeldte dig. Kan du ikke finde e-mailen? Klik på knappen nedenfor og vi kan sende dig en ny.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Importer sikkerhedskopi</a> <a class="btn btn-small btn-secondary download-backup-btn">Hent Backup</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Importer sikkerhedskopi</a> <a class="btn btn-small btn-secondary download-backup-btn">Hent Backup</a>
             </p>
 
             <h4>Mistet to-faktor autentifikation - detaljer.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Reset Tofactor Authentificering</a>
-            </p>
-
-            <h4>Glemt adgangskode</h4>
-
-            <p>Din tegnebog er krypteret af din browser, før den når frem til os, og af denne grund kan vi ikke hjælpe med at genfinde tabte passwords. For at undgå enhver mulig tab af penge som følge af glemte passwords, anbefales det du laver en papir backup af din tegnebogs private nøgler.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Recover Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Reset Tofactor Authentificering</a>
             </p>
 
             <h4>Brug for hjælp?</h4>
 
             <p>
-                Læs vores <a href="https://blockchain.info/wallet/support-pages">Supportsiderne</a>
+                Læs vores <a target="blank" href="https://blockchain.info/wallet/support-pages">Supportsiderne</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Normalt ville dine Bitcoin transaktioner være opført her, men du har ikke lavet nogen endnu.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Krypteret private nøgle</h3>
+            </div>
+            <div class="modal-body">
+                <p>En krypteret privat nøgle er blevet opdaget. Indtast krypteringskoden nedenfor:</p>
+                <p align="center">
+                    <b>Adgangssætning::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Fortsæt</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Wallet Password</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Adresse QR-kode <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Denne handling kræver den private nøgle fra Bitcoin adresse <span class="address" style="font-weight:bold"></span>. Angiv den private nøgle nedenfor.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Scan QR-koden</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Annuller</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Vent venligst ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Key stretching. Vent venligst ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

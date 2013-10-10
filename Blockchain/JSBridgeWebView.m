@@ -95,6 +95,10 @@
 	return self;
 }
 
+-(void)reset {
+    usedIDs = [NSMutableSet set];
+}
+
 /*
 	This is the reimplementation of the superclass setter method for the delegate property.
 	This reimplementation hides the internal functionality of the class.
@@ -210,7 +214,8 @@
 	it is a JS notification.
  */
 - (void)webView:(WebView *)p_WebView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id < WebPolicyDecisionListener >)listener
-{    
+{
+    
 	// Checks if it is a JS notification. It returns the ID ob the JSON object in the JS code. Returns nil if it is not.
 	NSArray * IDArray = [self getJSNotificationIds:[request URL]];
         
@@ -234,7 +239,10 @@
                     NSString * response = [bridgeDelegate webView:p_WebView didReceiveJSNotificationWithDictionary: dicTranslated];
                     
                     if (response != nil) {
-                        [p_WebView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"JSBridge_setResponseWithId(%@, \"%@\");", jsNotId, [response stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""]]];
+                        
+                        NSString * function = [NSString stringWithFormat:@"JSBridge_setResponseWithId(%@, \"%@\");", jsNotId, [response stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""]];
+                        
+                        [p_WebView stringByEvaluatingJavaScriptFromString:function];
                     } else {
                         [p_WebView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"JSBridge_setResponseWithId(%@, null);", jsNotId]];
                     }

@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="ru">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Работать</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 итераций</h3>
+
+        <p>PBKDF2 это функция, которая тянется пароль увеличения усилий, необходимых для BruteForce его. Более высокое число итераций лучше, однако, вы можете заметить замедление вашего браузера.</p>
+
+        <p><b>Изменение этого значения может привести к проблемам совместимости между старыми клиентами, которые не поддерживают новый формат шифрования кошелька.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Итерации:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Вы можете быстро переключаться между биткойнами и местной валютой, нажав на свой баланс в правом верхнем углу.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Ручка Bitcoin ссылки</h3>
+
+        <p>Хотели бы Вы, чтобы установить blockchain.info по умолчанию обработчик ссылок Bitcoin? Bitcoin ссылки (URI), которые используются для автоматического ввода адреса получателя и отправить Bitcoin значение при нажатии.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Регистрация обработчика URI</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Вторая подсказка пароля:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 итераций</h3>
-
-        <p>PBKDF2 это функция, которая тянется пароль увеличения усилий, необходимых для BruteForce его. Более высокое число итераций лучше, однако, вы можете заметить замедление вашего браузера.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Итерации:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Архив адресов</h3>
 
             <p>Архивные адреса - это адреса, которые вам вряд ли понадобятся. Такие адреса скрыты с основной страницы, но всё ещё являются частью вашего кошелька. Вы можете разархивировать их в любое время, нажав на синий значок.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Общий Адреса</h3>
 
-            <p style="padding-top:10px">Общий адреса предназначены для приема платежей вы хотите сохранить частных. Любые выплаты, полученные посылаются через общий кошелек разорвать цепь операций. <a href="https://blockchain.info/wallet/send-shared" target="new">(Подробнее)</a></p>
+            <p style="padding-top:10px">Общий адреса предназначены для приема платежей вы хотите сохранить частных. Любые выплаты, полученные посылаются через общий кошелек разорвать цепь операций. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Подробнее)</a></p>
 
             <p class="well">
                 <b>Общий адреса действительны в течение одного сделки только и нести на 0,5% за операцию.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Добро пожаловать назад </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Открыть кошелек</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Создать новый кошелек</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p>Если вы потеряли идентификатор вашего кошелька в первую очередь проверьте подтверждение по электронной почте, которое вы получили при регистрации. Не можете найти письмо? Нажмите на кнопку ниже, и мы можем отправить вам новое.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Восстановление Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Импорт резервной копии</a> <a class="btn btn-small btn-secondary download-backup-btn">Скачать резервного копирования</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Восстановление Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Импорт резервной копии</a> <a class="btn btn-small btn-secondary download-backup-btn">Скачать резервного копирования</a>
             </p>
 
             <h4>Забыли детали двухфакторной аутентификации.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Сброс двухфакторной аутентификации</a>
-            </p>
-
-            <h4>Забыли пароль?</h4>
-
-            <p>Ваш кошелек шифруется в вашем браузере перед отправкой на наш сервер. Поэтому мы не можем помочь восстановить утерянные пароли. Чтобы избежать денежных потерь из-за забытых паролей мы рекомендуем вам сделать бумажную резервную копию закрытых ключей вашего кошелька.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Восстановление Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Сброс двухфакторной аутентификации</a>
             </p>
 
             <h4>Нужна помощь?</h4>
 
             <p>
-                Прочтите наши <a href="https://blockchain.info/wallet/support-pages">Страницы поддержки</a>
+                Прочтите наши <a target="blank" href="https://blockchain.info/wallet/support-pages">Страницы поддержки</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Обычно здесь перечислены ваши Bitcoin транзакции, но вы пока не сделали ни одной.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Зашифрованные закрытым ключом</h3>
+            </div>
+            <div class="modal-body">
+                <p>Зашифрованного закрытого ключа было обнаружено. Введите фразу шифрования ниже:</p>
+                <p align="center">
+                    <b>Ключевая фраза::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Продолжить</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Бумажник Пароль</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>QR-код адреса <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Это действие требует закрытый ключ для адреса <span class="address" style="font-weight:bold"></span>. Пожалуйста, введите секретный ключ ниже.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Сканирования QR-код</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Пожалуйста, подождите ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Ключевые растяжения. Пожалуйста, подождите ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="pt">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Correr</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 iterações</h3>
+
+        <p>PBKDF2 é uma função que se estende sua senha aumentando o esforço necessário para BruteForce-lo. Um maior número de iterações é melhor, contudo, você pode notar uma desaceleração do seu navegador.</p>
+
+        <p><b>A alteração desse valor pode causar problemas de compatibilidade entre os clientes antigos que não suportam o novo formato de criptografia carteira.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Iterações:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Você pode alternar rapidamente entre sua moeda local e bitcoins clicando sobre o seu saldo no canto superior direito.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Lidar com Bitcoin Ligações</h3>
+
+        <p>Gostaria de definir blockchain.info como o manipulador padrão de links bitcoin? Bitcoin ligações (URIs) são usados ​​para inserir automaticamente um endereço bitcoin destinatário e enviar valor quando clicado.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Registre Handler URI</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Dica da Senha Secundária:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 iterações</h3>
-
-        <p>PBKDF2 é uma função que se estende sua senha aumentando o esforço necessário para BruteForce-lo. Um maior número de iterações é melhor, contudo, você pode notar uma desaceleração do seu navegador.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Iterações:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Endereços Arquivados</h3>
 
             <p>Endereços arquivados são os endereços que você pode não precisar mais e ficam escondidos da listagem principal mas ainda sim fazem parte da sua carteira. Você pode retira-los do arquivo a hora que quiser clicando no ícone azul.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Endereços compartilhados</h3>
 
-            <p style="padding-top:10px">Endereços compartilhados são projetados para receber o pagamento que você deseja manter privadas. Quaisquer pagamentos recebidos são enviados através de uma carteira compartilhada quebrar a cadeia de transações. <a href="https://blockchain.info/wallet/send-shared" target="new">(Maiores Informações)</a></p>
+            <p style="padding-top:10px">Endereços compartilhados são projetados para receber o pagamento que você deseja manter privadas. Quaisquer pagamentos recebidos são enviados através de uma carteira compartilhada quebrar a cadeia de transações. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Maiores Informações)</a></p>
 
             <p class="well">
                 <b>Endereços compartilhados são válidas para uma única transacção e pagará uma taxa de transação de 0,5%.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Seja bem vindo de volta </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Abrir Carteira</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Criar Novo Wallet</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> Se você esqueceu o identificador da sua carteira primeiro verifique o email de confirmação que você recebeu ao se cadastrar no nosso serviço. Caso não consiga encontra-lo, clique no botão abaixo e nós lhe enviaremos um novo email.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Recuperar Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Importar Cópia de Segurança</a> <a class="btn btn-small btn-secondary download-backup-btn">Descarregar o Backup</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Recuperar Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Importar Cópia de Segurança</a> <a class="btn btn-small btn-secondary download-backup-btn">Descarregar o Backup</a>
             </p>
 
             <h4>Perda dos detalhes da Autenticação de Fator Duplo.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Resetar a Autenticação de Fator Duplo</a>
-            </p>
-
-            <h4>Esqueci Minha Senha</h4>
-
-            <p>Sua carteira é criptofragada pelo seu browser antes de ser enviada para nós, por isso nós não temos nenhuma forma de ajudar você a recuperar a sua senha. Para evitar perdas financeiras decorrentes de senhas esquecidas, recomendamos que você faça um backup de papel das chaves privadas da sua carteira.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Recuperar Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Resetar a Autenticação de Fator Duplo</a>
             </p>
 
             <h4>Precisa de Ajuda?</h4>
 
             <p>
-                Acesse nossas <a href="https://blockchain.info/wallet/support-pages">Páginas de Suporte</a>
+                Acesse nossas <a target="blank" href="https://blockchain.info/wallet/support-pages">Páginas de Suporte</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Normalmente suas transações bitcoin são exibidas nessa tela, porém você ainda não realizou nenhuma.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Criptografada da chave privada</h3>
+            </div>
+            <div class="modal-body">
+                <p>Uma chave privada cifrada foi detectado. Por favor insira a frase secreta de criptografia abaixo:</p>
+                <p align="center">
+                    <b>Passphrase::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Carteira senha</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Código QR do Endereço <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Essa ação requer a chave privada do seguinte endereço bitcoin <span class="address" style="font-weight:bold"></span>. Por favor digite a chave privada abaixo.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Digitalizar QR Code</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Aguarde ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Chave de alongamento. Por favor, aguarde ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="vi">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Chạy</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Interactions</h3>
+
+        <p>PBKDF2 là một chức năng mà trải dài mật khẩu của bạn tăng các nỗ lực cần thiết để bruteforce nó. Một số cao lặp đi lặp lại là tốt hơn tuy nhiên bạn có thể nhận thấy một sự xuống chậm của trình duyệt của bạn.</p>
+
+        <p><b>Thay đổi giá trị này có thể gây ra vấn đề tương thích giữa các khách hàng cũ mà không hỗ trợ các định dạng mã hóa ví mới.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Lặp đi lặp lại:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Bạn có thể thay đổi giữa bitcoin và tiền tệ địa phương bạn bằng cách nhấn vào số dư của bạn ở trên cùng bên phải.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Xử lý Liên kết Bitcoin</h3>
+
+        <p>Bạn có muốn thiết lập blockchain.info như xử lý mặc định của liên kết Bitcoin? Bitcoin liên kết (URI) được sử dụng để tự động nhập địa chỉ Bitcoin người nhận và gửi giá trị khi nhấp vào.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Đăng ký URI Handler</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Gợi ý mật khẩu phụ:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Interactions</h3>
-
-        <p>PBKDF2 là một chức năng mà trải dài mật khẩu của bạn tăng các nỗ lực cần thiết để bruteforce nó. Một số cao lặp đi lặp lại là tốt hơn tuy nhiên bạn có thể nhận thấy một sự xuống chậm của trình duyệt của bạn.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Lặp đi lặp lại:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Địa chỉ đã lưu trữ</h3>
 
             <p>Những địa chỉ đã lưu trữ là những địa chỉ bạn có thể không cần nữa, chúng được ẩn đi từ trang chính những vẫn là 1 phần trong ví của bạn. Bạn có thể bỏ lưu trữ chúng bất cứ lúc nào bằng cách nhấn vào biểu tượng xanh.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Chia sẻ địa chỉ</h3>
 
-            <p style="padding-top:10px">Địa chỉ chia sẻ được thiết kế để nhận được khoản thanh toán bạn muốn giữ riêng tư. Bất kỳ khoản tiền nhận được sẽ được gửi thông qua một chiếc ví được chia sẻ phá vỡ dây chuyền của các giao dịch. <a href="https://blockchain.info/wallet/send-shared" target="new">(Thêm thông tin)</a></p>
+            <p style="padding-top:10px">Địa chỉ chia sẻ được thiết kế để nhận được khoản thanh toán bạn muốn giữ riêng tư. Bất kỳ khoản tiền nhận được sẽ được gửi thông qua một chiếc ví được chia sẻ phá vỡ dây chuyền của các giao dịch. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Thêm thông tin)</a></p>
 
             <p class="well">
                 <b>Địa chỉ chia sẻ có giá trị trong một giao dịch duy nhất và phải chịu một khoản phí giao dịch 0,5%.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Chào mừng quay trở lại </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Mở ví</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Tạo Wallet mới</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p>Nếu bạn mất định danh ví, đầu tiên hãy xác nhận hòm thư mỗi khi bạn đăng kí. Không thể tìm thấy thư? Nhấn vào nút dưới đây và chúng tôi sẽ gửi một cái mới.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Phục hồi Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Nhập sao lưu</a> <a class="btn btn-small btn-secondary download-backup-btn">Tải về sao lưu</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Phục hồi Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Nhập sao lưu</a> <a class="btn btn-small btn-secondary download-backup-btn">Tải về sao lưu</a>
             </p>
 
             <h4>Mất thông tin xác thực 2 bước.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Thiết lập lại xác thực 2 bước</a>
-            </p>
-
-            <h4>Mất mật khẩu</h4>
-
-            <p>Ví của bạn được mã hóa bởi trình duyệt trước khi nó được lưu bởi chúng tôi và đó là lí do chúng tôi không thể giúp đỡ bạn lấy lại mật khẩu đã mất. Để tránh mất tiền do quên mật khẩu, khuyến cáo bạn nên tạo một bản sao lưu giấy khóa riêng ví của bạn.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Phục hồi Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Thiết lập lại xác thực 2 bước</a>
             </p>
 
             <h4>Cần giúp đỡ?</h4>
 
             <p>
-                Đọc <a href="https://blockchain.info/wallet/support-pages">Trang hỗ trợ</a> của chúng tôi
+                Đọc <a target="blank" href="https://blockchain.info/wallet/support-pages">Trang hỗ trợ</a> của chúng tôi
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Bình thường thì giao dịch bitcoin của bạn được nêu ở đây nhưng có thể bạn vẫn chưa làm nó.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Mã hóa khóa riêng</h3>
+            </div>
+            <div class="modal-body">
+                <p>Một khóa bí mật được mã hóa đã được phát hiện. Xin vui lòng nhập vào mã hóa mật khẩu dưới đây:</p>
+                <p align="center">
+                    <b>Mật khẩu::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Tiếp tục</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Ví Mật khẩu</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Mã địa chỉ QR <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Hành động này cần khóa riêng của địa chỉ bitcoin <span class="address" style="font-weight:bold"></span>. Nhập vào khóa riêng dưới đây.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Quét mã QR</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Huỷ bỏ</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Vui lòng đợi ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Chính kéo dài. Xin vui lòng chờ đợi ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

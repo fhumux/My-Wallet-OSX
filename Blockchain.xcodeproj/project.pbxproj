@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A425111806298A00360BD0 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A425101806298A00360BD0 /* Quartz.framework */; };
+		84A4251418062AD300360BD0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4251318062AD300360BD0 /* NSData+Base64.m */; };
 		84AD1EAF17BD9F9900681C8A /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1E9C17BD9F9900681C8A /* SBJsonParser.m */; };
 		84AD1EB017BD9F9900681C8A /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1E9E17BD9F9900681C8A /* SBJsonStreamParser.m */; };
 		84AD1EB117BD9F9900681C8A /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1EA017BD9F9900681C8A /* SBJsonStreamParserAccumulator.m */; };
@@ -31,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84A425101806298A00360BD0 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		84A4251218062AD300360BD0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		84A4251318062AD300360BD0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		84AD1E9A17BD9F9900681C8A /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
 		84AD1E9B17BD9F9900681C8A /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
 		84AD1E9C17BD9F9900681C8A /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A425111806298A00360BD0 /* Quartz.framework in Frameworks */,
 				84DEB7E217BD0CEA00D67031 /* WebKit.framework in Frameworks */,
 				84DEB7C517BD0B3800D67031 /* Cocoa.framework in Frameworks */,
 			);
@@ -139,6 +145,7 @@
 		84DEB7C317BD0B3800D67031 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A425101806298A00360BD0 /* Quartz.framework */,
 				84DEB7C417BD0B3800D67031 /* Cocoa.framework */,
 				84DEB7C617BD0B3800D67031 /* Other Frameworks */,
 			);
@@ -158,6 +165,8 @@
 		84DEB7CA17BD0B3800D67031 /* Blockchain */ = {
 			isa = PBXGroup;
 			children = (
+				84A4251218062AD300360BD0 /* NSData+Base64.h */,
+				84A4251318062AD300360BD0 /* NSData+Base64.m */,
 				84AD1EB917BDB21100681C8A /* JSBridgeWebView.h */,
 				84AD1EBA17BDB21100681C8A /* JSBridgeWebView.m */,
 				84AD1E9917BD9F9900681C8A /* SBJSON */,
@@ -252,6 +261,7 @@
 			files = (
 				84DEB7D117BD0B3800D67031 /* main.m in Sources */,
 				84DEB7D817BD0B3800D67031 /* AppDelegate.m in Sources */,
+				84A4251418062AD300360BD0 /* NSData+Base64.m in Sources */,
 				84DEB86D17BD2E4700D67031 /* GBWebViewExternalLinkHandler.m in Sources */,
 				84AD1EAF17BD9F9900681C8A /* SBJsonParser.m in Sources */,
 				84AD1EB017BD9F9900681C8A /* SBJsonStreamParser.m in Sources */,
@@ -366,7 +376,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blockchain/Blockchain-Prefix.pch";
 				INFOPLIST_FILE = "Blockchain/Blockchain-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -382,7 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blockchain/Blockchain-Prefix.pch";
 				INFOPLIST_FILE = "Blockchain/Blockchain-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

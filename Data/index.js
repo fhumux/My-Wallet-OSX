@@ -16,15 +16,17 @@ function contains(a, obj) {
 }
 
 try {
-    var language = localStorage.getItem('language');
+    MyStore.get('language', function(language) {
+        var available = ['fr', 'da', 'de', 'ko', 'hi', 'th', 'it', 'nl', 'es', 'ja', 'pl', 'pt', 'sv', 'ru', 'en', 'el', 'zh-cn', 'ro', 'bg', 'vi', 'id', 'tr', 'sl', 'no', 'hu'];
 
-    var available = ['fr', 'da', 'de', 'ko', 'hi', 'th', 'it', 'nl', 'es', 'ja', 'pl', 'pt', 'sv', 'ru', 'en', 'el', 'zh-cn', 'ro', 'bg', 'vi', 'id', 'tr', 'sl', 'no', 'hu'];
+        if (language && contains(available, language)) {
+            sendToLanguage(language);
+        } else {
+            MyStore.remove('language');
 
-    if (language && contains(available, language)) {
-        sendToLanguage(language);
-    } else {
-        sendToLanguage('en');
-    }
+            sendToLanguage('en');
+        }
+    });
 } catch (e) {
     console.log(e);
 

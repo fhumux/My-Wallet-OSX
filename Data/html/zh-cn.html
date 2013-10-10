@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="zh-cn">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">运行</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2迭代</h3>
+
+        <p>PBKDF2是一种功能延伸所需的努力来猜解密码增加。较高的迭代次数为更好然而，您可能会注意到您的浏览器放缓。</p>
+
+        <p><b>更改此值会引起老客户，不支持新的电子钱包加密格式之间的兼容性问题。</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">迭代:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>您可以通过点击右上角的平衡称快速切换比特币和您的当地货币，。</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>处理Bitcoin的链接</h3>
+
+        <p>你想作为默认的处理程序设置blockchain.info的bitcoin的链接？ Bitcoin的链接（URI）来自动输入一个收件人的Bitcoin地址及送价值点击时。</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">注册URI处理器</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">第二个密码提示：</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2迭代</h3>
-
-        <p>PBKDF2是一种功能延伸所需的努力来猜解密码增加。较高的迭代次数为更好然而，您可能会注意到您的浏览器放缓。</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">迭代:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>存档地址</h3>
 
             <p>存档地址将在主视图中隐藏，但它仍然是钱包的一部分。您可以在任何时候通过点击蓝色的图标来归档。</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>共享地址，</h3>
 
-            <p style="padding-top:10px">共享地址收到的款项将被转发到另一个地址在你的钱包。通过一个共享的钱包，打破了交易链的发送收到任何付款。 <a href="https://blockchain.info/wallet/send-shared" target="new">(更多信息)</a></p>
+            <p style="padding-top:10px">共享地址收到的款项将被转发到另一个地址在你的钱包。通过一个共享的钱包，打破了交易链的发送收到任何付款。 <a href="https://blockchain.info/wallet/send-shared" target="blank">(更多信息)</a></p>
 
             <p class="well">
                 <b>共享地址的有效交易只收取0.5％的交易费。</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>欢迎您回来 </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">打开钱包</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">创建新钱包</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> 如果您已经失去了您的钱包标识符，先检查确认您在注册时收到的电子邮件。无法找到电子邮件吗？点击下面的按钮，我们可以给您一个新的。</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">恢复钱包</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">导入备份</a> <a class="btn btn-small btn-secondary download-backup-btn">下载备份</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">恢复钱包</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">导入备份</a> <a class="btn btn-small btn-secondary download-backup-btn">下载备份</a>
             </p>
 
             <h4>失落双因素身份验证的信息。</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">复位双因素身份认证</a>
-            </p>
-
-            <h4>忘记密码</h4>
-
-            <p>您的钱包发送给我们之前已经加密，所以忘记了密码后将无法恢复。为了避免财产损失，建议对钱包的私钥做一个纸备份。</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">恢复钱包</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">复位双因素身份认证</a>
             </p>
 
             <h4>需要帮助吗？</h4>
 
             <p>
-                请阅读我们的<a href="https://blockchain.info/wallet/support-pages">支持页面</a>
+                请阅读我们的<a target="blank" href="https://blockchain.info/wallet/support-pages">支持页面</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">通常您的比特币交易会被列在这里，但您还没有作出任何交易。</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>加密的私有密钥</h3>
+            </div>
+            <div class="modal-body">
+                <p>已检测到加密的私钥。请输入下面的加密密码：</p>
+                <p align="center">
+                    <b>通关密语：:</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">继续</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>钱包密码</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>地址QR码 <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>这个动作需要的私密金钥的比特币的地址<span class="address" style="font-weight:bold"></span>。请输入下面的私钥。</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>扫描QR码</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">取消</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>请稍候...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            重点拉伸。请等候。
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

@@ -14,6 +14,18 @@ span.qrcodeicon span {
     background: url('./Resources/qrcode.png');
 }
 
+.form-horizontal .control-label {
+	width: 120px;
+}
+
+.form-horizontal .controls {
+	margin-left: 140px;
+}
+
+#restore-wallet input {
+	max-width: 300px;
+}
+
 .quickstart {
 	padding-top: 0px;
 	background-color: #AFAFAF;
@@ -50,10 +62,6 @@ span.qrcodeicon span {
 
 #restore-wallet > div {
 	margin-top: 0px;
-}
-
-#restore-wallet input {
-	max-width: 350px;
 }
 
 html {

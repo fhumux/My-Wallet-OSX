@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="no">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Kjør</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 gjentakelser</h3>
+
+        <p>PBKDF2 er en funksjon som strekker passordet øke innsatsen som kreves for å bruteforce det. Et høyere antall gjentakelser er bedre men du kan merke en langsom ned av nettleseren din.</p>
+
+        <p><b>Endre denne verdien kan føre til kompatibilitetsproblemer mellom gamle kunder som ikke støtter den nye lommeboken kryptering format.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Iterasjoner:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Du kan raskt bytte mellom Bitcoins og din lokale valuta ved å klikke på balanse i øverst til høyre.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Håndtak Bitcoin Lenker</h3>
+
+        <p>Har du lyst til å sette blockchain.info som standard behandlingsprogram for Bitcoin koblinger? Bitcoin lenker (URI) brukes for å automatisk bli en mottaker bitcoin adresse og send verdi når den klikkes.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Registrer URI Handler</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Second Passord hint:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 gjentakelser</h3>
-
-        <p>PBKDF2 er en funksjon som strekker passordet øke innsatsen som kreves for å bruteforce det. Et høyere antall gjentakelser er bedre men du kan merke en langsom ned av nettleseren din.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Iterasjoner:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Arkiverte adresser</h3>
 
             <p>Arkiverte adresser er adressene du kanskje ikke trenger lenger som er skjult fra hovedvisningen men fortsatt en del av lommeboken din. Du kan un-arkiv dem når som helst ved å klikke på den blå ikonet.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Delte adresser</h3>
 
-            <p style="padding-top:10px">Delte adresser er laget for å motta betaling du ønsker å holde privat. Eventuelle innbetalinger blir sendt gjennom en felles lommebok bryte kjeden av transaksjoner. <a href="https://blockchain.info/wallet/send-shared" target="new">(Mer info)</a></p>
+            <p style="padding-top:10px">Delte adresser er laget for å motta betaling du ønsker å holde privat. Eventuelle innbetalinger blir sendt gjennom en felles lommebok bryte kjeden av transaksjoner. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Mer info)</a></p>
 
             <p class="well">
                 <b>Delte adresser er gyldige for en transaksjon bare og pådra seg en 0,5% transaksjonsgebyr.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Velkommen tilbake </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Åpen lommebok</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Opprett ny lommebok</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p>Hvis du har mistet lommeboken identifikator først sjekke e-posten du mottok da du registrerte deg. Finner du ikke e-posten? Klikk på knappen under, og vi kan sende deg en ny.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Gjenopprette Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Import Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Last ned Backup</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Gjenopprette Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Import Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Last ned Backup</a>
             </p>
 
             <h4>Mistet to-faktor autentisering detaljer.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Tilbakestille to faktor autentisering</a>
-            </p>
-
-            <h4>Glemt passord</h4>
-
-            <p>Lommeboken er kryptert med nettleseren før den når oss og på grunn av dette kan vi ikke bidra til å gjenopprette tapte passord. For å unngå eventuelle økonomiske tap på grunn av glemte passord anbefales det at du gjør et papir backup av din lommebok private nøkler.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Gjenopprette Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Tilbakestille to faktor autentisering</a>
             </p>
 
             <h4>Trenger du hjelp?</h4>
 
             <p>
-                Les vår <a href="https://blockchain.info/wallet/support-pages">Supportsidene</a>
+                Les vår <a target="blank" href="https://blockchain.info/wallet/support-pages">Supportsidene</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Normalt dine Bitcoin transaksjoner vil bli oppført her, men du har ikke gjort noe ennå.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Kryptert, privat nøkkel</h3>
+            </div>
+            <div class="modal-body">
+                <p>En kryptert privat nøkkel er oppdaget. Vennligst skriv inn kryptering passord nedenfor:</p>
+                <p align="center">
+                    <b>Passordfrase::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Fortsett</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Lommebok passord</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Ta QR-kode <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Denne handlingen krever den private nøkkelen Bitcoin adresse <span class="address" style="font-weight:bold"></span>. Vennligst skriv den private nøkkelen nedenfor.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Skann QR-kode</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Avbryt</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Vennligst vent ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Key stretching. Vennligst vent ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

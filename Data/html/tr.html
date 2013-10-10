@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="tr">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Çalıştırmak</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 tekrarlamalar</h3>
+
+        <p>PBKDF2 bu Bruteforce için gereken çabayı artan Şifrenizi uzanan bir fonksiyonudur. Yineleme sayısı arttıkça, ancak tarayıcınızın bir yavaşlama fark edebilirsiniz daha iyidir.</p>
+
+        <p><b>Bu değeri değiştirmek yeni cüzdan şifreleme biçimini desteklemeyen eski müşterileri arasında uyumluluk sorunlarına neden olabilir.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Yineleme:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Hızla sağ üst dengenizi tıklayarak bitcoins ve yerel para birimi arasında geçiş yapabilirsiniz.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Bitcoin Linkler Kolu</h3>
+
+        <p>Eğer bitcoin bağlantıların varsayılan işleyici olarak blockchain.info ayarlamak ister misiniz? Bitcoin bağlantılar (URI) otomatik olarak alıcı bitcoin adresinizi girin ve tıklandığında değer göndermek için kullanılır.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">URI Handler Kayıt</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">İkinci Şifre İpucu:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 tekrarlamalar</h3>
-
-        <p>PBKDF2 bu Bruteforce için gereken çabayı artan Şifrenizi uzanan bir fonksiyonudur. Yineleme sayısı arttıkça, ancak tarayıcınızın bir yavaşlama fark edebilirsiniz daha iyidir.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Yineleme:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Arşivlenmiş Adresleri</h3>
 
             <p>Arşivlenmiş adresleri ana görünümden gizli ama hala cüzdanını parçası olduğunu artık gerek olmayabilir adreslerdir. Sen mavi simgesine tıklayarak istediğiniz zaman un-arşiv onları yapabilirsiniz.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Paylaşılan Adresleri</h3>
 
-            <p style="padding-top:10px">Paylaşılan adresler size özel kalmasını istediğiniz ödeme almak için tasarlanmıştır. Alınan tüm para yatırma işlemlerinin zinciri kıran bir paylaşılan cüzdan aracılığıyla gönderilir. <a href="https://blockchain.info/wallet/send-shared" target="new">(Daha Fazla Bilgi)</a></p>
+            <p style="padding-top:10px">Paylaşılan adresler size özel kalmasını istediğiniz ödeme almak için tasarlanmıştır. Alınan tüm para yatırma işlemlerinin zinciri kıran bir paylaşılan cüzdan aracılığıyla gönderilir. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Daha Fazla Bilgi)</a></p>
 
             <p class="well">
                 <b>Paylaşılan Adresleri tek bir işlem için geçerlidir ve% 0.5 işlem ücretine tabi.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Welcome Back </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Açık Cüzdan</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Yeni Cüzdan Oluştur</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p>Cüzdanını tanımlayıcı kaybettiyseniz ilk kayıt sırasında aldığınız onay e-postası kontrol edin. E-posta bulamıyor musunuz? Aşağıdaki butona tıklayın ve yeni bir tane gönderebiliriz.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Cüzdan kurtarmak</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">İthalat Yedekleme</a> <a class="btn btn-small btn-secondary download-backup-btn">Yedekleme indirin</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Cüzdan kurtarmak</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">İthalat Yedekleme</a> <a class="btn btn-small btn-secondary download-backup-btn">Yedekleme indirin</a>
             </p>
 
             <h4>İki faktörlü kimlik doğrulama Detaylar Kayıp.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">İki Faktörlü Doğrulama sıfırlayın</a>
-            </p>
-
-            <h4>Kayıp Şifre</h4>
-
-            <p>Bize ulaşır ve bu nedenle biz kayıp şifreleri kurtarmak için yardım edemiyoruz önce cüzdanınız tarayıcınız tarafından şifrelenir. Eğer cüzdan özel anahtarlarının bir kağıt yedeğini önerilir unutulan şifreleri doğabilecek para kaybını önlemek için.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Cüzdan kurtarmak</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">İki Faktörlü Doğrulama sıfırlayın</a>
             </p>
 
             <h4>Yardıma mı ihtiyacınız var?</h4>
 
             <p>
-                <a href="https://blockchain.info/wallet/support-pages">Destek Sayfaları</a> de okuyun
+                <a target="blank" href="https://blockchain.info/wallet/support-pages">Destek Sayfaları</a> de okuyun
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Normalde Bitcoin işlemleri burada listelenmiş olmak istiyorum ama henüz yapılmış değil.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Şifreli Özel Anahtar</h3>
+            </div>
+            <div class="modal-body">
+                <p>Şifreli özel anahtar tespit edildi. Şifreleme parolanızı aşağıya girin:</p>
+                <p align="center">
+                    <b>Parola::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Devam etmek</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Cüzdan Şifre</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>QR Code Adres <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Bu eylem Bitcoin adresi <span class="address" style="font-weight:bold"></span> özel anahtarı gerektirir. Aşağıdaki özel anahtarı girin.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>QR Code tarama</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Iptal</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Lütfen Bekleyin ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Anahtar germe. Lütfen bekleyin ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

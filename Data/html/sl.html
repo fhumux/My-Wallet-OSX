@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="sl">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Run</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Iterations</h3>
+
+        <p>PBKDF2 is a function which stretches your password increasing the effort required to bruteforce it. A higher number of iterations is better however you may notice a slow down of your browser.</p>
+
+        <p><b>Changing this value can cause compatability issues between old clients which don't support the new wallet encryption format.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Iterations:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>S klikom na stanje zgoraj desno lahko hitro preklapljate med prikazom zneskov v BTC in v svoji lokalni valuti.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Handle Bitcoin Links</h3>
+
+        <p>Would you like to set blockchain.info as the default handler of bitcoin links? Bitcoin links (URIs) are used to automatically enter a recipient bitcoin address and send value when clicked.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Register URI Handler</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Namig za drugo geslo:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Iterations</h3>
-
-        <p>PBKDF2 is a function which stretches your password increasing the effort required to bruteforce it. A higher number of iterations is better however you may notice a slow down of your browser.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Iterations:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Arhivirani naslovi</h3>
 
             <p>Arhivirani naslovi so naslovi, ki so še vedno del vaše denarnice, vendar so skriti iz osnovnega pogleda, ker jih verjetno ne boste več potrebovali. Dearhivirate jih lahko kadarkoli s klikom na modro ikono.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Deljeni naslovi</h3>
 
-            <p style="padding-top:10px">Deljeni naslovi so namenjeni prejemanju plačil, ki jih želite ohraniti zasebna. Vsa prejeta plačila gredo skozi skupno denarnico, s čimer se prekine veriga transakcij med virom in ciljem novcev. <a href="https://blockchain.info/wallet/send-shared" target="new">(Več informacij)</a></p>
+            <p style="padding-top:10px">Deljeni naslovi so namenjeni prejemanju plačil, ki jih želite ohraniti zasebna. Vsa prejeta plačila gredo skozi skupno denarnico, s čimer se prekine veriga transakcij med virom in ciljem novcev. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Več informacij)</a></p>
 
             <p class="well">
                 <b>Deljeni naslovi veljajo samo za eno transakcijo, za katero velja 1.5% provizija.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Dobrodošli nazaj </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Odpri denarnico</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Create New Wallet</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> Če ste pozabili ID vaše denarnice, najprej preverite potrditveno elektronsko sporočilo, ki ste ga prejeli ob registraciji. Ne najdete sporočila? Kliknite na gumb spodaj in poslali vam ga bomo ponovno.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Uvoz varnostne kopije</a> <a class="btn btn-small btn-secondary download-backup-btn">Prenesi varnostno kopijo</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Uvoz varnostne kopije</a> <a class="btn btn-small btn-secondary download-backup-btn">Prenesi varnostno kopijo</a>
             </p>
 
             <h4>Pozabljeni podatki za dvostopenjsko overitev</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Ponastavi dvostopenjsko overitev</a>
-            </p>
-
-            <h4>Pozabljeno geslo</h4>
-
-            <p>Vaša denarnica se šifrira v brskalniku, preden podatki prispejo do nas, zato vam ne moremo pomagati pri povrnitvi pozabljenih gesel. Da bi se izognili izgubi finančnih sredstev zaradi izgubljenih gesel, priporočamo, da si naredite papirnate varnostne kopije zasebnih ključev svoje denarnice.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Recover Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Ponastavi dvostopenjsko overitev</a>
             </p>
 
             <h4>Need Help?</h4>
 
             <p>
-                Preberite <a href="https://blockchain.info/wallet/support-pages">Strani za podporo</a>
+                Preberite <a target="blank" href="https://blockchain.info/wallet/support-pages">Strani za podporo</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Vaše bitcoin transakcije bodo vidne tukaj, čim boste kako opravili</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Encrypted Private Key</h3>
+            </div>
+            <div class="modal-body">
+                <p>An encrypted private key has been detected. Please enter the encryption passphrase below:</p>
+                <p align="center">
+                    <b>Passphrase::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Nadaljuj</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Wallet Password</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>QR-koda naslova <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Za to dejanje potrebujete zasebni ključ za bitcoin naslov <span class="address" style="font-weight:bold"></span>. Prosimo vnesite zasebni ključ. </p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Prečitaj QR-kodo</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Please Wait...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Key stretching. Please wait..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

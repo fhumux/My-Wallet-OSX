@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="sv">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Kör</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Iterationer</h3>
+
+        <p>PBKDF2 är en funktion som sträcker lösenordet öka den ansträngning som krävs för att Bruteforce den. Ett högre antal iterationer är bättre men du kan märka en avmattning i din webbläsare.</p>
+
+        <p><b>Ändra detta värde kan orsaka kompatibilitetsproblem mellan gamla klienter som inte stödjer det nya formatet plånboken kryptering.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Iterationer:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Du kan snabbt växla mellan bitcoins och din lokala valuta genom att klicka på ditt saldo i det övre högra hörnet.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Handtag Bitcoin Länkar</h3>
+
+        <p>Vill du ställa blockchain.info som standardprogram för Bitcoin länkar? Bitcoin länkar (URIs) används för att automatiskt ange en adress mottagare Bitcoin och skicka värdet när du klickar.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Registrera URI Handler</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Andra Lösenord Tips:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Iterationer</h3>
-
-        <p>PBKDF2 är en funktion som sträcker lösenordet öka den ansträngning som krävs för att Bruteforce den. Ett högre antal iterationer är bättre men du kan märka en avmattning i din webbläsare.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Iterationer:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Arkiverade adresser</h3>
 
             <p>Arkiverade adresser är adresser som du kanske inte behöver längre som är dolda från huvudvyn men fortfarande en del av din plånbok. Du kan un-arkiv dem när som helst genom att klicka på den blå ikonen.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Delade adresser</h3>
 
-            <p style="padding-top:10px">Delade adresser är utformade för att erhålla betalning du vill behålla privat. Eventuella erhållna betalningar skickas via en gemensam plånbok bryta kedjan av transaktioner. <a href="https://blockchain.info/wallet/send-shared" target="new">(Mer info)</a></p>
+            <p style="padding-top:10px">Delade adresser är utformade för att erhålla betalning du vill behålla privat. Eventuella erhållna betalningar skickas via en gemensam plånbok bryta kedjan av transaktioner. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Mer info)</a></p>
 
             <p class="well">
                 <b>Delade adresser gäller för en transaktion bara och medföra en 0,5% transaktionsavgift.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Välkommen tillbaka </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Öppna Plånbok</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Skapa ny plånbok</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> Om du har förlorat din plånbok identifierare först kontrollera e-postbekräftelse du fått under registrera dig. Hittar du inte e-postmeddelandet? Klicka på knappen nedan och vi kan skicka dig ett nytt.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Plånbok</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Importera Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Ladda Backup</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Plånbok</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Importera Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Ladda Backup</a>
             </p>
 
             <h4>Förlorade tvåfaktorsautentisering detaljer.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Återställs två faktors autentisering</a>
-            </p>
-
-            <h4>Glömt lösenord</h4>
-
-            <p>Din plånbok krypteras av din webbläsare innan den når oss och därför kan vi inte hjälpa återställa förlorade lösenord. För att undvika eventuella monetära förlust på grund av glömda lösenord rekommenderas det du gör ett papper säkerhetskopia av din plånbok privata nycklar.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Recover Plånbok</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Återställs två faktors autentisering</a>
             </p>
 
             <h4>Behöver du hjälp?</h4>
 
             <p>
-                Läs vår <a href="https://blockchain.info/wallet/support-pages">Supportsidorna</a>
+                Läs vår <a target="blank" href="https://blockchain.info/wallet/support-pages">Supportsidorna</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Normalt dina Bitcoin transaktioner skulle listas här men du har inte gjort några ännu.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Krypterad privat nyckel</h3>
+            </div>
+            <div class="modal-body">
+                <p>En krypterad privat nyckel har upptäckts. Ange krypteringsnyckeln lösenfras nedan:</p>
+                <p align="center">
+                    <b>Lösenordsfras::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Fortsätt</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Plånbok Lösenord</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Itu QR-kod <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Denna åtgärd kräver den privata nyckeln för Bitcoin-adress <span class="address" style="font-weight:bold"></span>. Ange den privata nyckeln nedan.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Skanna QR-kod</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Avbryt</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Vänta ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Key stretching. Vänta ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

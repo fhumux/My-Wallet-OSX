@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="ro">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Alerga</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Iterations</h3>
+
+        <p>PBKDF2 este o funcție care se întinde parola creșterea efortul necesar pentru a bruteforce. Un număr mare de iterații este mai bine însă este posibil să observați o încetinire a browser-ului.</p>
+
+        <p><b>Schimbarea aceasta valoare poate cauza probleme de compatibilitate între clienții vechi, care nu suporta noul format de criptare portofel.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Iterații:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Aveti posibilitatea sa face-ti converstia rapid între bitcoins si moneda dvs. locala facând clic pe soldul dvs. în dreapta sus.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Manevrați Bitcoin Link-uri</h3>
+
+        <p>Doriți să setați blockchain.info ca gestionar implicit de link-uri Bitcoin? Bitcoin link-uri (URI-uri) sunt folosite pentru a introduce automat o adresă Bitcoin destinatar și trimite valoare atunci cand este apasat.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Inregistrare Handler URI</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">A doua sugestie de parola:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Iterations</h3>
-
-        <p>PBKDF2 este o funcție care se întinde parola creșterea efortul necesar pentru a bruteforce. Un număr mare de iterații este mai bine însă este posibil să observați o încetinire a browser-ului.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Iterații:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Adrese arhivate</h3>
 
             <p>Adresele arhivate, sunt adrese care nu mai trebuiesc ascunse in vederea principala, dar care fac parte inca din portofelul dvs. Aveti posibilitatea sa le dezarhivati în orice moment, facând clic pe pictograma albastra.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Adrese comun</h3>
 
-            <p style="padding-top:10px">Adresele comune sunt concepute pentru a primi plăți pe care doriți să le păstrați private. Orice plăți primite sunt trimise printr-un portofel comun de rupere a lanțului de tranzacții. <a href="https://blockchain.info/wallet/send-shared" target="new">(Mai multe informatii)</a></p>
+            <p style="padding-top:10px">Adresele comune sunt concepute pentru a primi plăți pe care doriți să le păstrați private. Orice plăți primite sunt trimise printr-un portofel comun de rupere a lanțului de tranzacții. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Mai multe informatii)</a></p>
 
             <p class="well">
                 <b>Adrese comune sunt valabile pentru o singură tranzacție și numai suporta un comision de tranzacție de 0,5%.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Bine ai revenit </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Deschidere Portofel</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Creați portofel nou</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> Daca ati pierdut username-ul Dvs. de portofel verificati mai întâi ce e-mail de confirmare l-ati primit in timpul inscriere. Nu puteti gasi e-mailul? Faceti clic pe butonul de mai jos si va putem trimite una noua.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Recuperare Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Import Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Descarca Backup</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Recuperare Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Import Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Descarca Backup</a>
             </p>
 
             <h4>Detalii despre pierderea celor doi factori de autentificare</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Schimbati doi factor de autentificare</a>
-            </p>
-
-            <h4>Am uitat parola</h4>
-
-            <p>Portofelul tau este criptata prin browser-ul dumneavoastra înainte de a ne contacta si pentru acest motiv, suntem în imposibilitatea de a ajuta la recuperarea parolelor pierdute. Pentru a evita orice posibila pierdere monetara datorita parolele uitate, se recomanda sa faceti o copie de rezerva pe hârtie a cheiei portofelului dumneavoastra privat.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Recuperare Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Schimbati doi factor de autentificare</a>
             </p>
 
             <h4>Aveti nevoie de ajutor?</h4>
 
             <p>
-                Citi-ti <a href="https://blockchain.info/wallet/support-pages">Suport Pagini</a>
+                Citi-ti <a target="blank" href="https://blockchain.info/wallet/support-pages">Suport Pagini</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">În mod normal, tranzactiile bitcoin ar fi enumerate aici, dar nu ati facut nici una inca.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Cheie criptată Private</h3>
+            </div>
+            <div class="modal-body">
+                <p>O cheie privată criptată a fost detectat. Vă rugăm introduceți criptare fraza de autentificare de mai jos:</p>
+                <p align="center">
+                    <b>Frază de acces::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Continua</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Portofel Parola</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Adresa QR Code <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Aceasta actiune necesita cheia privata a adresei bitcoin <span class="address" style="font-weight:bold"></span>. Va rugam sa introduceti cheia privata de mai jos.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Scanați QR Code</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Anula</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Vă rugăm să așteptați ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Cheie stretching. Vă rugăm să așteptați ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

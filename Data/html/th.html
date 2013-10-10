@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="th">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">วิ่ง</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 ซ้ำ</h3>
+
+        <p>PBKDF2 เป็นฟังก์ชันซึ่งทอดตัวรหัสผ่านของคุณที่เพิ่มขึ้นความจำเป็นในการ BruteForce มัน จำนวนที่สูงขึ้นของการทำซ้ำจะดีกว่า แต่คุณอาจสังเกตเห็นการชะลอตัวของเบราว์เซอร์ของคุณ</p>
+
+        <p><b>การเปลี่ยนค่านี้อาจทำให้เกิดปัญหาความเข้ากันได้ระหว่างลูกค้าเก่าที่ไม่สนับสนุนรูปแบบใหม่กระเป๋าสตางค์เข้ารหัส</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">ซ้ำ:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>คุณได้อย่างรวดเร็วสามารถสลับระหว่าง Bitcoins และสกุลเงินท้องถิ่นของคุณโดยคลิกสมดุลของคุณในด้านบนขวา</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>จัดการลิงค์ Bitcoin</h3>
+
+        <p>คุณต้องการที่จะตั้งเป็น blockchain.info ดำเนินการเริ่มต้นของการเชื่อมโยง Bitcoin? bitcoin เชื่อมโยง (ยูริ) ถูกนำมาใช้โดยอัตโนมัติป้อนที่อยู่ Bitcoin ของผู้รับและส่งค่าเมื่อมีการคลิก</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">ลงทะเบียนจัดการ URI</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">คำใบ้รหัสผ่านที่สอง:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 ซ้ำ</h3>
-
-        <p>PBKDF2 เป็นฟังก์ชันซึ่งทอดตัวรหัสผ่านของคุณที่เพิ่มขึ้นความจำเป็นในการ BruteForce มัน จำนวนที่สูงขึ้นของการทำซ้ำจะดีกว่า แต่คุณอาจสังเกตเห็นการชะลอตัวของเบราว์เซอร์ของคุณ</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">ซ้ำ:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>ที่อยู่ถาวร</h3>
 
             <p>ที่อยู่ถาวรคือที่อยู่คุณอาจไม่จำเป็นต้องมากกว่าที่ซ่อนอยู่จากมุมมองหลัก แต่ก็ยังเป็นส่วนหนึ่งของกระเป๋าสตางค์ของคุณ คุณสามารถยกเลิกการเก็บพวกเขาได้ตลอดเวลาโดยคลิกที่ไอคอนสีฟ้า</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>ที่อยู่ที่ใช้ร่วมกัน</h3>
 
-            <p style="padding-top:10px">ที่อยู่ที่ใช้ร่วมกันถูกออกแบบมาเพื่อรับการชำระเงินที่คุณต้องการเก็บไว้เป็นส่วนตัว การชำระเงินที่ได้รับจะถูกส่งผ่านกระเป๋าสตางค์ที่ใช้ร่วมกันทำลายห่วงโซ่ของการทำธุรกรรม <a href="https://blockchain.info/wallet/send-shared" target="new">(ข้อมูลเพิ่มเติม)</a></p>
+            <p style="padding-top:10px">ที่อยู่ที่ใช้ร่วมกันถูกออกแบบมาเพื่อรับการชำระเงินที่คุณต้องการเก็บไว้เป็นส่วนตัว การชำระเงินที่ได้รับจะถูกส่งผ่านกระเป๋าสตางค์ที่ใช้ร่วมกันทำลายห่วงโซ่ของการทำธุรกรรม <a href="https://blockchain.info/wallet/send-shared" target="blank">(ข้อมูลเพิ่มเติม)</a></p>
 
             <p class="well">
                 <b>ที่อยู่ที่ใช้ร่วมกันถูกต้องสำหรับการทำธุรกรรมเท่านั้นและต้องเสียค่าธรรมเนียมการทำธุรกรรม 0.5%</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>สู่ขวัญ </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">เปิดกระเป๋าสตางค์</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">สร้างกระเป๋าใหม่</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> หากคุณมีสูญหายระบุกระเป๋าสตางค์ของคุณตรวจสอบก่อนอีเมลยืนยันที่คุณได้รับระหว่างการลงทะเบียน ไม่พบอีเมล? คลิกที่ปุ่มด้านล่างและเราสามารถส่งใหม่</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">การกู้คืนกระเป๋าสตางค์</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">การสำรองข้อมูลนำเข้า</a> <a class="btn btn-small btn-secondary download-backup-btn">ดาวน์โหลดสำรอง</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">การกู้คืนกระเป๋าสตางค์</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">การสำรองข้อมูลนำเข้า</a> <a class="btn btn-small btn-secondary download-backup-btn">ดาวน์โหลดสำรอง</a>
             </p>
 
             <h4>หายไปสองปัจจัยการตรวจสอบรายละเอียด</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">ตั้งค่าใหม่การตรวจสอบปัจจัยที่สอง</a>
-            </p>
-
-            <h4>ลืมรหัสผ่าน</h4>
-
-            <p>หากคุณมีสูญหายระบุกระเป๋าสตางค์ของคุณที่ใช้ในการตรวจสอบอีเมลยืนยันที่คุณได้รับเมื่อคุณสมัครสมาชิก ไม่พบอีเมล? คลิกที่ปุ่มด้านล่างและเราสามารถส่งใหม่</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">การกู้คืนกระเป๋าสตางค์</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">ตั้งค่าใหม่การตรวจสอบปัจจัยที่สอง</a>
             </p>
 
             <h4>ต้องการความช่วยเหลือ?</h4>
 
             <p>
-                อ่าน <a href="https://blockchain.info/wallet/support-pages">หน้าสนับสนุน</a> ของเรา
+                อ่าน <a target="blank" href="https://blockchain.info/wallet/support-pages">หน้าสนับสนุน</a> ของเรา
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">โดยปกติการทำธุรกรรม Bitcoin ของคุณจะอยู่ที่นี่ แต่คุณยังไม่ได้ทำ แต่อย่างใด</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>กุญแจส่วนตัวที่เข้ารหัส</h3>
+            </div>
+            <div class="modal-body">
+                <p>กุญแจส่วนตัวที่เข้ารหัสได้รับการตรวจ กรุณากรอกรหัสผ่านการเข้ารหัสลับด้านล่าง:</p>
+                <p align="center">
+                    <b>รหัสผ่าน::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">ดำเนินการต่อไป</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>รหัสผ่านกระเป๋าสตางค์</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>ที่อยู่รหัส QR <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>การดำเนินการนี้ต้องใช้คีย์ส่วนตัวของที่อยู่ Bitcoin <span class="address" style="font-weight:bold"></span> กรุณากรอกคีย์ส่วนตัวด้านล่าง</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>สแกน QR Code ได้</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">ยกเลิก</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>กรุณารอ ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            กุญแจสำคัญในการยืด โปรดรอสักครู่ ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

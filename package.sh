@@ -7,19 +7,21 @@ cd ../
 cd ./My-Wallet-OSX/Data
 
 WEB_CONTENT="../../website/WebContent"
-
+DOWNLOAD_HTML=true;
 RESOURCE_DIR="$WEB_CONTENT/Resources"
+HTML_DIR="./html"
 
+if $DOWNLOAD_HTML ; then
+	rm -r "$HTML_DIR"
+	mkdir "$HTML_DIR"
 
-#rm -r ./html/
-#mkdir ./html/
-
-#array=( fr da de ko hi th it nl es ja pl pt sv ru en el zh-cn ro bg vi id tr sl no hu )
-#for i in "${array[@]}"
-#do
-#	echo $i
-#	wget --no-check-certificate -O "./html/$i.html" "http://local.blockchain.info:8080/$i/wallet/extension-template?resource_relative=up_dir&type=tidesdk&enable_satoshidice=false&disable_mixer-true&no_header=true"
-#done
+	array=( fr da de ko hi th it nl es ja pl pt sv ru en el zh-cn ro bg vi id tr sl no hu )
+	for i in "${array[@]}"
+	do
+		echo $i
+		wget --no-check-certificate -O "$HTML_DIR/$i.html" "http://blockchain.info/$i/wallet/extension-template?resource_relative=up_dir&type=tidesdk&enable_satoshidice=false&disable_mixer-true&no_header=true"
+	done
+fi
 
 #Copy Favicon
 cp $WEB_CONTENT/favicon.ico ./
@@ -117,6 +119,7 @@ cp $RESOURCE_DIR/wallet/mnemonic.min.js ./Resources/wallet/
 cp $RESOURCE_DIR/wallet/jsuri-1.1.1.min.js ./Resources/wallet/
 cp $RESOURCE_DIR/wallet/paper-wallet.min.js ./Resources/wallet/
 cp $RESOURCE_DIR/wallet/jspdf.min.js ./Resources/wallet/
+cp $RESOURCE_DIR/wallet/filesaver.min.js ./Resources/wallet/
 
 #icons
 cp $RESOURCE_DIR/cube48.png ./Resources/

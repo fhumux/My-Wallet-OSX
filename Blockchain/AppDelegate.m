@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "GBWebViewExternalLinkHandler.h"
+#import <Quartz/Quartz.h>
+#import "NSData+Base64.h"
 
 @implementation AppDelegate
 
@@ -19,13 +21,19 @@
 }
 
 -(id)getKey:(NSString*)dictionary {
-   return [[NSUserDefaults standardUserDefaults] valueForKey:[dictionary valueForKey:@"key"]];
+    NSString * key = [dictionary valueForKey:@"key"];
+
+    //NSLog(@"GET %@", key);
+
+   return [[NSUserDefaults standardUserDefaults] valueForKey:key];
 }
 
 -(id)saveKey:(NSString*)dictionary {
     
     NSString * key = [dictionary valueForKey:@"key"];
     NSString * value = [dictionary valueForKey:@"value"];
+    
+    //NSLog(@"SAVE %@ %@", key, value);
     
     //Hack for wallet data, also save in app documents
     if ([key isEqualToString:@"payload"]) {
@@ -64,9 +72,38 @@
     return nil;
 }
 
+
+-(id)scanQrCode:(NSDictionary*)dictionary {
+    IKPictureTaker * pictureTaker = [IKPictureTaker pictureTaker];
+    
+    NSUInteger result = [pictureTaker runModal];
+    
+    if (result == NSOKButton) {
+        NSImage * image = [pictureTaker outputImage];
+        
+        CGImageRef cgRef = [image CGImageForProposedRect:NULL
+                                                 context:nil
+                                                   hints:nil];
+        NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
+        
+        [newRep setSize:[image size]];   // if you want the same resolution
+        
+        NSData * data = [newRep representationUsingType:NSPNGFileType properties:nil];
+        
+        NSString * uri = [[[@"data:image/png;base64," stringByAppendingString:[data base64EncodedString]] stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+        
+        return uri;
+    }
+    
+    return nil;
+}
+
 - (NSString*)webView:(WebView*) webview didReceiveJSNotificationWithDictionary:(NSDictionary*) dictionary
 {
     NSString * function = (NSString*)[dictionary objectForKey:@"function"];
+    
+    NSLog(@"%@", function);
+    
     if (function != nil) {
         SEL selector = NSSelectorFromString(function);
         if ([self respondsToSelector:selector])
@@ -85,6 +122,7 @@
     return nil;
 }
 
+
 - (void)showNotification:(NSString *)title description:(NSString*)description {
     if (notificationCenterIsAvailable) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
@@ -96,8 +134,8 @@
     }
 }
 
-
 -(WebView *)webView:(WebView *)sender createWebViewWithRequest:(NSURLRequest *)request {
+    
     return [GBWebViewExternalLinkHandler riggedWebViewWithLoadHandler:^(NSURL *url) {
         [[NSWorkspace sharedWorkspace] openURL:url];
     }];
@@ -110,18 +148,63 @@
 }
 
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+- (void)getUrl:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
 {
-    notificationCenterIsAvailable = (NSClassFromString(@"NSUserNotificationCenter")!=nil);
+    
+    // Get the URL
+    NSString *urlStr = [[event paramDescriptorForKeyword:keyDirectObject]
+                        stringValue];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+        [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"\
+                                                              var urlStr = '%@';\
+                                                              window.location.hash = '#' + urlStr;\
+                                                              console.log(window.location);\
+                                                              var send_container = $(\"#send-coins\");\
+                                                              send_container.trigger('click');\
+                                                              var recipient = send_container.find('.tab-pane.active').find('.recipient').first();\
+                                                              MyWallet.handleURI(urlStr, recipient);", [urlStr stringByReplacingOccurrencesOfString:@"'" withString:@"\'"]]];
+        
+        NSLog(@"%@", urlStr);
+    });
+}
 
+-(void)awakeFromNib
+{
+    NSAppleEventManager *em = [NSAppleEventManager sharedAppleEventManager];
+    [em setEventHandler:self andSelector:@selector(getUrl:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
+}
+
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
+    
+    NSLog(@"didFinishLoadForFrame:");
+          
+    NSString * resources = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Data/Resources/"];
+
+    NSURL * url = [NSURL fileURLWithPath:resources];
+        
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"resource = '%@';", [url absoluteString]]];
+    
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
+
+-(void)initWebview {
+    
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+    
+    notificationCenterIsAvailable = (NSClassFromString(@"NSUserNotificationCenter")!=nil);
+    
     NSString * resources = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Data/"];
     
     NSString * indexPath = [resources stringByAppendingPathComponent:@"index.html"];
-
+    
     WebPreferences* prefs = [self.webView preferences];
     
     NSString * documentsDirectory = [self getApplicationDocumentsPath];
-
+    
     [prefs performSelector:@selector(_setLocalStorageDatabasePath:) withObject:documentsDirectory];
     [prefs performSelector:@selector(setLocalStorageEnabled:) withObject:[NSNumber numberWithBool:TRUE]];
     
@@ -132,10 +215,24 @@
     
     [self.webView setUIDelegate:self];
     
-    if (notificationCenterIsAvailable)
+    if (notificationCenterIsAvailable) {
         [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    }
+    
+    [self.webView setFrameLoadDelegate:self];
     
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:indexPath]]];
+}
+
+-(void)reload:(NSString*)dictionary {
+    [self.webView reset];
+    
+    [self initWebview];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    [self initWebview];
 }
 
 @end

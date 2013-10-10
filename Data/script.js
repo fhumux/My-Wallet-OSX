@@ -1,97 +1,150 @@
 isExtension = true;
 APP_NAME = 'javascript_osx';
 
-$(document).ready(function() {
-    var body = $(document.body);
+if (typeof $ != 'undefined') {
+    $(document).ready(function() {
+        var body = $(document.body);
 
-    var data_root = body.data('root');
-    if (data_root)
-        root = data_root;
+        var data_root = body.data('root');
+        if (data_root)
+            root = data_root;
 
-    var data_resource = body.data('resource');
-    if (data_resource)
-        resource = data_resource;
+        //Hide QR Code icons
+        // $('input[name="send-to-address"]').next().hide();
+        // $('.qrcodeicon').find('span').remove();
 
-                  
-    $('#restore-wallet > div > div:nth-child(1)').attr('class', 'span12');
+        //$('#restore-wallet > div > div:nth-child(1)').attr('class', 'span12');
 
-    $('#restore-wallet > div:nth-child(1)').attr('class', 'row-fluid');
+        //$('#restore-wallet > div:nth-child(1)').attr('class', 'row-fluid');
 
-    $('#restore-wallet > div > div:nth-child(2)').remove();
+       // $('#restore-wallet > div > div:nth-child(2)').remove();
 
-    $('#home-intro > div > div:nth-child(1)').attr('class', 'span12').prepend('<h2 style="display:inline-block">Account Summary <small>Overview of your Blockchain account</small></h2><div class="page-header" style="margin-top:0px;padding:0px"></div>');
+       // $('#home-intro > div > div:nth-child(1)').attr('class', 'span12').prepend('<h2 style="display:inline-block">Account Summary <small>Overview of your Blockchain account</small></h2><div class="page-header" style="margin-top:0px;padding:0px"></div>');
 
-    $('#home-intro > div > div:nth-child(2)').remove();
-                        
-    $('#status-container').empty().html('<h2 style="font-size:24px"></h2>').find('h2').append($('.quickstart > .container > div:first-of-type > .span12 > h1 > div'));
-                  
-    //$('#my-transactions h2 small').remove();
-                  
-    $('#balance2').remove();
-                  
-    $('.quickstart > .container > div:first-of-type').remove();
-                  
-    $('#send-ticker').remove();
+        //$('#home-intro > div > div:nth-child(2)').remove();
 
-    $('#import-export-btn').parent().remove();
+        $('#status-container').empty().html('<h2 style="font-size:24px"></h2>').find('h2').append($('.quickstart > .container > div:first-of-type > .span12 > h1 > div'));
 
-    $('#active-addresses').css('margin-bottom', '25px').parent().css('overflow', 'visible');
+        $('#balance2').remove();
 
-    $('#generate-cold-storage').parent().parent().parent().remove();
+        $('.quickstart > .container > div:first-of-type').remove();
 
-    $('#home-intro-btn').prepend('<div class="icon-home" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+        $('#send-ticker').remove();
 
-    $('#my-transactions-btn').prepend('<div class="icon-tasks" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+        $('#import-export-btn').parent().remove();
 
-    $('#send-coins-btn').prepend('<div class="icon-arrow-up" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+        $('#active-addresses').css('margin-bottom', '25px').parent().css('overflow', 'visible');
 
-    $('#receive-coins-btn').prepend('<div class="icon-arrow-down" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+        $('#generate-cold-storage').parent().parent().parent().remove();
+
+        $('#home-intro-btn').prepend('<div class="icon-home" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+
+        $('#my-transactions-btn').prepend('<div class="icon-tasks" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+
+        $('#send-coins-btn').prepend('<div class="icon-arrow-up" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+
+        $('#receive-coins-btn').prepend('<div class="icon-arrow-down" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
+
+        //Override logout
+        //Should never happen
+        MyWallet.logout = function() {}
+    });
+}
+
+if (typeof MyWallet == 'undefined')
+    var MyWallet = {};
+
+if (typeof MyStore == 'undefined')
+    var MyStore = {};
 
 
-    //Override logout
-    //Should never happen
-    MyWallet.logout = function() {}
-});
+var superSetLanguage = MyWallet.setLanguage;
+MyWallet.setLanguage = function(language) {
+    if (MyWallet.getLanguage()) {
+        superSetLanguage(language);
+
+        MyWallet.makeNotice('success', 'misc-success', 'Changing Language ' + language + '. Please Wait...');
+
+        setTimeout(function() {
+            var obj = new JSBridgeObj();
+
+            obj.addObject("function", "reload:");
+
+            obj.sendBridgeObject();
+        }, 1000);
+    } else {
+        superSetLanguage(language);
+    }
+}
+
+MyWallet.scanQRCode = function(success, error) {
+    var obj = new JSBridgeObj();
+
+    obj.addObject("function", "scanQrCode:");
+
+    obj.sendBridgeObject(function(data) {
+        console.log(data);
+
+        loadScript('wallet/llqrcode', function() {
+            try {
+                qrcode.callback = function(data) {
+                   
+                   console.log('callback data ' + data);
+                   
+                    if (data) {
+                        success(data);
+                    } else {
+                        error();
+                    }
+                };
+
+                qrcode.decode(data);
+            } catch(e) {
+                error();
+            }
+        }, error);
+    });
+};
 
 MyStore.put = function(key, value) {
     var obj = new JSBridgeObj();
-    
+
     obj.addObject("function", "saveKey:");
     obj.addObject("key", key);
     obj.addObject("value", value);
-    
+
     obj.sendBridgeObject();
 }
-    
+
 MyStore.get = function(key, callback) {
     var obj = new JSBridgeObj();
-    
+
     obj.addObject("function", "getKey:");
     obj.addObject("key", key);
-    
+
     obj.sendBridgeObject(callback);
 }
 
 MyStore.remove = function(key) {
     var obj = new JSBridgeObj();
-    
+
     obj.addObject("function", "removeKey:");
     obj.addObject("key", key);
-    
+
     obj.sendBridgeObject();
 }
-    
+
 MyStore.clear = function() {
     var obj = new JSBridgeObj();
-    
+
     obj.addObject("function", "clearKeys:");
-    
+
     obj.sendBridgeObject();
 }
 
 MyWallet.showNotification = function(options) {
     var obj = new JSBridgeObj();
-    
+
     obj.addObject("function", "showNotification:");
     obj.addObject("title", options.title);
     obj.addObject("description", options.body);
@@ -226,7 +279,7 @@ function JSBridgeObj_AddObjectAuxiliar(id, obj)
                 objStr = JSON.stringify(obj);
                 objType = typeof(obj);
             }
-            
+
             result = "\"" + id + "\": { \"value\":" + "" + objStr + ", \"type\": \"" + objType + "\"}";
         }
     }
@@ -259,23 +312,23 @@ function JSBridgeObj_SendObject(callback)
     JSBridge_objArray[JSBridge_objCount] = this.objectJson;
 
     JSBridge_pendingObjIDs.push(JSBridge_objCount);
-        
+
     window.location.href = "JSBridge://ReadNotificationWithId=" + JSBridge_pendingObjIDs.join(',');
 
     if (callback) {
         (function(JSBridge_objCount, callback) {
             var ii = 0;
             var interval = setInterval(function() {
-              if (JSBridge_objResponses[JSBridge_objCount] || ii > 250) {
-                callback(JSBridge_objResponses[JSBridge_objCount]);
-                clearInterval(interval);
-              } else {
-                ++ii;
-              }
+                if (JSBridge_objResponses[JSBridge_objCount] || ii > 250) {
+                    callback(JSBridge_objResponses[JSBridge_objCount]);
+                    clearInterval(interval);
+                } else {
+                    ++ii;
+                }
             }, 1);
-         })(JSBridge_objCount, callback);
+        })(JSBridge_objCount, callback);
     }
-    
+
     JSBridge_objCount++;
 }
 
@@ -296,10 +349,11 @@ function JSBridge_getJsonStringForObjectWithId(objId)
 function JSBridge_setResponseWithId(objId, value)
 {
     JSBridge_objResponses[objId] = value;
-        
-    JSBridge_pendingObjIDs = $.grep(JSBridge_pendingObjIDs, function(value) {
-           return value != objId;
-           });
+
+    var i = JSBridge_pendingObjIDs.indexOf(objId);
+    if(i != -1) {
+        JSBridge_pendingObjIDs.splice(i, 1);
+    }
 }
 
 

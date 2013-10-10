@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="nl">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Lopen</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Iteraties</h3>
+
+        <p>PBKDF2 is een functie die vergeten uitstrekt verhogen van de inspanning die nodig is om het Bruteforce. Een hoger aantal iteraties is beter maar je kunt merken dat een vertraging van uw browser.</p>
+
+        <p><b>Het wijzigen van deze waarde kan leiden tot problemen met de compatibiliteit tussen oude clients die geen ondersteuning van de nieuwe wallet encryptie-formaat.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Iteraties:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>U kunt snel overschakelen tussen Bitcoins en uw lokale valuta door te klikken op uw saldo in de rechterbovenhoek.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Handvat Bitcoin Links</h3>
+
+        <p>Wilt u blockchain.info als de standaard handler van Bitcoin koppelingen ingesteld? Bitcoin koppelingen (URI&#39;s) worden gebruikt om een ​​ontvanger bitcoin adres automatisch invoeren en versturen waarde wanneer erop wordt geklikt.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Registreer URI handler</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Tweede Password Hint:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Iteraties</h3>
-
-        <p>PBKDF2 is een functie die vergeten uitstrekt verhogen van de inspanning die nodig is om het Bruteforce. Een hoger aantal iteraties is beter maar je kunt merken dat een vertraging van uw browser.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Iteraties:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Gearchiveerde Adressen</h3>
 
             <p>Gearchiveerde adressen zijn adressen die u misschien niet meer nodig heeft en die daarom verborgen zijn in de hoofdweergave. U kunt deze op elk gewenst moment dearchiveren door te klikken op het blauwe pictogram.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Gedeelde Adressen</h3>
 
-            <p style="padding-top:10px">Ontvangen betalingen naar gedeelde adressen worden doorgestuurd naar een ander adres in uw portemonnee. Ontvangen betalingen worden verzonden via een gedeelde portemonnee het breken van de keten van transacties. <a href="https://blockchain.info/wallet/send-shared" target="new">(Meer info)</a></p>
+            <p style="padding-top:10px">Ontvangen betalingen naar gedeelde adressen worden doorgestuurd naar een ander adres in uw portemonnee. Ontvangen betalingen worden verzonden via een gedeelde portemonnee het breken van de keten van transacties. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Meer info)</a></p>
 
             <p class="well">
                 <b>Gedeelde Adressen zijn geldig voor een transactie slechts en maken een 0,5% transactiekosten.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Setup voortzetten </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Open portemonnee</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Maak Nieuwe Wallet</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> Als u uw portemonnee identificatie verloren bent, controleer dan eerst de bevestigingsmail die u heeft ontvangen tijdens het aanmelden. Kunt u de e-mail niet vinden? Klik dan op onderstaande knop en wij sturen u een nieuw exemplaar.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Importeren Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Download Backup</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Recover Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Importeren Backup</a> <a class="btn btn-small btn-secondary download-backup-btn">Download Backup</a>
             </p>
 
             <h4>Verloren Dubbele authenticatie Details.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Reset dubbele authenticatie</a>
-            </p>
-
-            <h4>Wachtwoord vergeten</h4>
-
-            <p>Uw portemonnee is versleuteld door uw browser voordat hdeze ons bereikt en om deze reden zijn we niet in staat om te helpen verloren wachtwoorden te herstellen. Om mogelijke verlies van geld te voorkomen als gevolg van vergeten wachtwoorden is het raadzaam een papieren back-up van de private keys van uw portemonnee te maken.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Recover Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Reset dubbele authenticatie</a>
             </p>
 
             <h4>Hulp nodig?</h4>
 
             <p>
-                Lees onze <a href="https://blockchain.info/wallet/support-pages">Ondersteuning Pagina's</a>
+                Lees onze <a target="blank" href="https://blockchain.info/wallet/support-pages">Ondersteuning Pagina's</a>
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Normaal gesproken uzouden w Bitcoin transacties hier worden vermeld, maar u heeft er mpg geen.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Versleutelde Private Key</h3>
+            </div>
+            <div class="modal-body">
+                <p>Een versleutelde private key is gedetecteerd. Vul het codeerwachtwoord hieronder:</p>
+                <p align="center">
+                    <b>Passphrase::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Verdergaan</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Wallet wachtwoord</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Adres QR Code <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Deze actie vereist de private key van bitcoin adres <span class="address" style="font-weight:bold"></span>. Voer hieronder de private key in.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Scan QR Code</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Annuleren</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Gelieve te wachten ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Key stretching. Een ogenblik geduld ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>

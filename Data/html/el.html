@@ -29,7 +29,7 @@
     
 </head>
 
-<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/">
+<body data-war-checksum="" data-root="https://blockchain.info/" data-resource="../Resources/" data-language="el">
 
 <div class="quickstart">
     <div class="container">
@@ -195,6 +195,31 @@
             <button class="btn" id="run-compressed-check">Εκτέλεση</button>
         </p>
     </div>
+
+    <div class="page-header">
+        <h3>PBKDF2 Επαναλήψεις</h3>
+
+        <p>PBKDF2 είναι μια λειτουργία που απλώνεται κωδικό σας αυξάνοντας την προσπάθεια που απαιτείται για την ωμής βίας. Ένας μεγαλύτερος αριθμός των επαναλήψεων είναι καλύτερα, ωστόσο μπορεί να παρατηρήσετε μια επιβράδυνση του browser σας.</p>
+
+        <p><b>Η αλλαγή αυτής της τιμής μπορεί να προκαλέσει προβλήματα συμβατότητας μεταξύ των παλαιών πελατών που δεν υποστηρίζουν τη νέα μορφή κρυπτογράφησης πορτοφόλι.</b></p>
+
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Επαναλήψεις:</label>
+
+                <div class="controls">
+                    <select id="pbkdf2-iterations">
+                        <option value="10">10 (Default)</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                        <option value="5000">5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="tab-pane" id="account-general">
@@ -213,6 +238,14 @@
         <p>Μπορείτε να αλλάξετε γρήγορα ανάμεσα bitcoins και τοπικό νόμισμα κάνοντας κλικ στο πάνω δεξιά ισορροπία.</p>
 
         <select id="local_currency"></select>
+    </div>
+
+    <div class="page-header">
+        <h3>Χειριστείτε Bitcoin Links</h3>
+
+        <p>Θα θέλατε να ορίσετε blockchain.info ως το προεπιλεγμένο πρόγραμμα χειρισμού του Bitcoin συνδέσμους; Bitcoin σύνδεσμοι (URIs) χρησιμοποιούνται για να εισάγετε αυτόματα μια διεύθυνση Bitcoin παραλήπτη και στείλτε αξία όταν πατηθεί.</p>
+
+        <button class="btn btn-secondary" id="register-uri-handler">Εγγραφή Handler URI</button>
     </div>
 
     <div class="page-header">
@@ -556,28 +589,6 @@
                 <label class="control-label">Δεύτερη Συμβουλή Κωδικός:</label>
 
                 <div class="controls"><input id="password-hint2" type="text"/></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-header hidden">
-        <h3>PBKDF2 Επαναλήψεις</h3>
-
-        <p>PBKDF2 είναι μια λειτουργία που απλώνεται κωδικό σας αυξάνοντας την προσπάθεια που απαιτείται για την ωμής βίας. Ένας μεγαλύτερος αριθμός των επαναλήψεων είναι καλύτερα, ωστόσο μπορεί να παρατηρήσετε μια επιβράδυνση του browser σας.</p>
-
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label">Επαναλήψεις:</label>
-
-                <div class="controls">
-                    <select id="pbkdf2-iterations">
-                        <option value="10">10 (Default)</option>
-                        <option value="100">100</option>
-                        <option value="1000">1000</option>
-                        <option value="5000">5000</option>
-                        <option value="10000">10000</option>
-                    </select>
-                </div>
             </div>
         </div>
     </div>
@@ -948,7 +959,7 @@
             </div>
         </div>
 
-        <div class="tab-pane" id="archived-addresses">
+        <div class="tab-pane" id="archived-addresses" style="margin-bottom:200px">
             <h3>Αρχείο Διευθύνσεις</h3>
 
             <p>Διεύθυνση διεύθυνσή σας μπορούν να αρχειοθετηθούν δεν είναι πλέον κρυφό από την κύρια προβολή, αλλά ακόμα μέρος του το πορτοφόλι σας, μπορείτε να un-αρχείο τους, ανά πάσα στιγμή, κάνοντας κλικ στο μπλε εικονίδιο.</p>
@@ -975,7 +986,7 @@
         <div class="tab-pane" id="shared-addresses">
             <h3>Shared Διευθύνσεις</h3>
 
-            <p style="padding-top:10px">Πληρωμές που καταβάλλονται σε κοινές διευθύνσεις θα διαβιβαστεί σε άλλη διεύθυνση στο πορτοφόλι σας. Τυχόν πληρωμές που αποστέλλονται μέσω ενός κοινού πορτοφόλι σπάσιμο της αλυσίδας των συναλλαγών. <a href="https://blockchain.info/wallet/send-shared" target="new">(Περισσότερες πληροφορίες)</a></p>
+            <p style="padding-top:10px">Πληρωμές που καταβάλλονται σε κοινές διευθύνσεις θα διαβιβαστεί σε άλλη διεύθυνση στο πορτοφόλι σας. Τυχόν πληρωμές που αποστέλλονται μέσω ενός κοινού πορτοφόλι σπάσιμο της αλυσίδας των συναλλαγών. <a href="https://blockchain.info/wallet/send-shared" target="blank">(Περισσότερες πληροφορίες)</a></p>
 
             <p class="well">
                 <b>Shared Διευθύνσεις ισχύουν για μία μόνο συναλλαγή και να προβεί σε 0,5% τέλος συναλλαγής.</b>
@@ -1004,7 +1015,7 @@
 
     
 
-    <div class="row-fluid page-header" id="welcome_back_container">
+    <div class="row-fluid" id="welcome_back_container">
         <div class="span6">
             <div class="page-header">
                 <h3>Καλωσόρισες ξανά </h3>
@@ -1066,6 +1077,7 @@
 
                 <div style="padding-left: 160px;padding-bottom:20px">
                     <button class="btn btn-primary" id="restore-wallet-continue">Άνοιγμα Πορτοφόλι</button>
+                    <a href="https://blockchain.info/wallet/new" target="blank" id="signup-btn" class="btn btn-secondary" style="display:none">Δημιουργία νέου Wallet</a>
                 </div>
 
                 <div class="well auth-2" style="display:none;margin: 0 auto; margin-top: 10px; max-width: 470px;">
@@ -1102,7 +1114,7 @@
             <p> Αν έχετε χάσει το πορτοφόλι σας αναγνωριστικό ελέγξτε πρώτα το email επιβεβαίωσης που λάβατε κατά την εγγραφή. Δεν μπορείτε να βρείτε το e-mail; Κάντε κλικ στο κουμπί παρακάτω και μπορούμε να σας στείλουμε ένα νέο.</p>
 
             <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn">Ανάκτηση Wallet</a> <a class="btn btn-small btn-secondary" href="https://blockchain.info/wallet/import-wallet">Δημιουργία αντιγράφων ασφαλείας των εισαγωγών</a> <a class="btn btn-small btn-secondary download-backup-btn">Λήψη αντιγράφων ασφαλείας</a>
+                <a class="btn btn-small btn-secondary recover-wallet-btn">Ανάκτηση Wallet</a> <a class="btn btn-small btn-secondary" target="blank" href="https://blockchain.info/wallet/import-wallet">Δημιουργία αντιγράφων ασφαλείας των εισαγωγών</a> <a class="btn btn-small btn-secondary download-backup-btn">Λήψη αντιγράφων ασφαλείας</a>
             </p>
 
             <h4>Lost δύο παραγόντων Στοιχεία ταυτότητας.</h4>
@@ -1111,26 +1123,16 @@
 
 
             <p align="right">
-                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn" disabled="true">Επαναφορά δύο παράγοντα αυθεντικότητας</a>
-            </p>
-
-            <h4>Ξεχάσατε τον κωδικό σας</h4>
-
-            <p>Πορτοφόλι σας κρυπτογραφούνται από το πρόγραμμα περιήγησής σας πριν να μας φτάσει και για το λόγο αυτό δεν είμαστε σε θέση να βοηθήσει την ανάκτηση χαμένων κωδικών πρόσβασης. Για να αποφευχθεί κάθε πιθανή νομισματική απώλεια που οφείλεται στην ξεχασμένους κωδικούς πρόσβασης, συνιστάται να κάνετε ένα αντίγραφο ασφαλείας χαρτί των ιδιωτικών κλειδιών πορτοφόλι σας.</p>
-
-            <p align="right">
-                <a class="btn btn-small btn-secondary recover-wallet-btn" disabled="true">Ανάκτηση Wallet</a>
+                <a class="btn btn-small btn-secondary" id="reset-two-factor-btn">Επαναφορά δύο παράγοντα αυθεντικότητας</a>
             </p>
 
             <h4>Χρειάζεστε βοήθεια;</h4>
 
             <p>
-                Διαβάστε <a href="https://blockchain.info/wallet/support-pages">Σελίδες υποστήριξης</a> μας
+                Διαβάστε <a target="blank" href="https://blockchain.info/wallet/support-pages">Σελίδες υποστήριξης</a> μας
             </p>
         </div>
     </div>
-
-    
 
     
 </div>
@@ -1171,7 +1173,7 @@
     <p class="padded well" id="no-transactions" align="center">Συνήθως Bitcoin συναλλαγές θα αναφέρονται εδώ, αλλά δεν κάνετε μια συμφωνία πια.</p>
 
     <table id="transactions-compact" class="table table-striped table-condensed table-hover">
-        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:125px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
+        <thead><tr><th class="hidden-phone" style="width:365px">To / From</th><th style="min-width:130px">Date</th><th style="min-width:152px">Amount</th><th class="hidden-phone">Balance</th></tr></thead>
         <tbody></tbody>
     </table>
 
@@ -1709,6 +1711,23 @@
             </div>
         </div>
 
+        <div id="import-private-key-password" class="modal hide">
+            <div class="modal-header">
+                <h3>Κρυπτογραφημένο ιδιωτικό κλειδί</h3>
+            </div>
+            <div class="modal-body">
+                <p>Ένα κρυπτογραφημένο ιδιωτικό κλειδί έχει εντοπιστεί. Παρακαλώ εισάγετε την κωδική φράση κρυπτογράφησης παρακάτω:</p>
+                <p align="center">
+                    <b>Φράση κλειδί::</b> <input style="margin-left:10px" placeholder="password" name="password" type="password"/>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-primary">Συνεχίστε</button>
+                </div>
+            </div>
+        </div>
+
         <div id="import-password-modal" class="modal hide">
             <div class="modal-header">
                 <h3>Πορτοφόλι Κωδικός</h3>
@@ -1959,7 +1978,7 @@
     </div>
 </div>
 
-<div id="qr-code-modal" class="modal hide" style="width:400px">
+<div id="qr-code-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button> <h3>Διεύθυνση QR Code <small class="address"></small></h3>
     </div>
@@ -2260,7 +2279,7 @@
     <div class="modal-body">
         <p>Η δράση αυτή απαιτεί το ιδιωτικό κλειδί του Bitcoin διεύθυνση <span class="address" style="font-weight:bold"></span>. Παρακαλώ εισάγετε το ιδιωτικό κλειδί κάτω.</p>
 
-        <div style="margin:0 auto;width:400px">
+        <div style="width:400px;padding-left:20px;">
             <span class="qrcodeicon" /><input style="width:500px;max-width:400px;margin-bottom:0px;" placeholder="Private Key" name="key" type="text"/><span></span></span>
         </div>
     </div>
@@ -2273,18 +2292,35 @@
     </div>
 </div>
 
-<div id="qr-code-reader-modal" class="modal hide" style="width:400px">
+<div id="qr-code-reader-modal" class="modal hide" style="max-width:400px">
     <div class="modal-header">
         <h3>Σάρωση QR Code</h3>
     </div>
 
-    <div class="modal-body" style="width:auto;padding-left:0px;padding-right:0px;overflow:hidden;">
-        <div class="qr-code-reader" style="width:320px;height:240px;margin:0 auto;"></div>
+    <div class="modal-body" style="padding-left:20px;overflow:hidden;">
+        <div class="qr-code-reader" style="width:320px;height:240px;z-index:10;"></div>
     </div>
 
     <div class="modal-footer">
         <div class="btn-group pull-right">
             <button class="btn btn-secondary">Ακύρωση</button>
+        </div>
+    </div>
+</div>
+
+<div id="decrypting-progress-modal" class="modal hide" style="max-width:400px">
+    <div class="modal-header">
+        <h3>Παρακαλώ περιμένετε ...</h3>
+    </div>
+
+    <div class="modal-body">
+
+        <p align="center">
+            Βασικά τέντωμα. Παρακαλώ περιμένετε ..
+        </p>
+
+        <div class="progress progress-striped active" align="center">
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 </div>
