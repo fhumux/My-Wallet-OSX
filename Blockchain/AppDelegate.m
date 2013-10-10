@@ -74,7 +74,13 @@
 
 
 -(id)scanQrCode:(NSDictionary*)dictionary {
+    
     IKPictureTaker * pictureTaker = [IKPictureTaker pictureTaker];
+    
+    NSSize size;
+    size.height = 600.0f;
+    size.width = 600.0f;
+    [pictureTaker setValue:[NSValue valueWithSize:size] forKey:IKPictureTakerOutputImageMaxSizeKey];
     
     NSUInteger result = [pictureTaker runModal];
     

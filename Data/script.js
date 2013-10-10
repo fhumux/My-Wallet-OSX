@@ -45,6 +45,8 @@ if (typeof $ != 'undefined') {
 
         $('#receive-coins-btn').prepend('<div class="icon-arrow-down" style="height:14px;vertical-align:top;display:inline-block;width:18px;"></div>');
 
+        $('.download-backup-btn ').remove();
+                      
         //Override logout
         //Should never happen
         MyWallet.logout = function() {}
